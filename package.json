@@ -1,0 +1,23 @@
+{
+  "name": "hello-next-netlifycms",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Nathan Pointer <npointer@cbtnuggets.com>",
+  "license": "MIT",
+  "dependencies": {
+    "next": "^5.1.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "build": "next build",
+    "export": "next export",
+    "serve": "serve --open --port 8080 out",
+    "static": "yarn build && yarn export && yarn serve"
+  },
+  "devDependencies": {
+    "express": "^4.16.3",
+    "serve": "^6.5.3"
+  }
+}
