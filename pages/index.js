@@ -1,6 +1,10 @@
 import Nav from '../components/Nav'
 import Link from 'next/link'
 
+const posts = require('../_content/posts')
+
+console.log(posts)
+
 const PostLink = (props) => (
   <li>
     <Link as={`/post/${props.id}`} href={`/post?title=${props.title}`}>

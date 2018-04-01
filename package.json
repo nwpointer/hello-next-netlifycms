@@ -5,6 +5,7 @@
   "author": "Nathan Pointer <npointer@cbtnuggets.com>",
   "license": "MIT",
   "dependencies": {
+    "create-index": "^2.3.0",
     "next": "^5.1.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
