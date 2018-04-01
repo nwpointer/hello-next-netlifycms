@@ -1,7 +1,7 @@
 import Nav from '../components/Nav'
 import Link from 'next/link'
 
-const posts = require('../_content/posts')
+const { posts } = require('../_content')
 
 console.log(posts)
 
