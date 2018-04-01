@@ -1,0 +1,8 @@
+{
+  "layout": "blog",
+  "title": "some post name",
+  "date": "2018-04-01T11:36:50-07:00",
+  "thumbnail": "/static/img/uploads/gooseberry.jpg",
+  "rating": "3",
+  "body": "quality content"
+}
