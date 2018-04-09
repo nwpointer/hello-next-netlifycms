@@ -1,6 +1,6 @@
-import { Component } from 'react';
-import Nav from '../components/Nav'
-import posts from '../_content/posts.js'
+import { Component } from 'react'
+import Page from 'components/layouts/Page'
+import posts from 'content/posts.js'
 
 export default class extends Component {
   static async getInitialProps({query}) {
@@ -9,11 +9,10 @@ export default class extends Component {
 
   render() {
     return(
-      <div>
-        <Nav />
+      <Page>
         <h1>{this.props.title}</h1>
         {this.props.body}
-      </div>
+      </Page>
     )
   }
 }

@@ -5,25 +5,32 @@
   "author": "Nathan Pointer <npointer@cbtnuggets.com>",
   "license": "MIT",
   "dependencies": {
+    "autoprefixer": "^8.2.0",
+    "babel-plugin-module-resolver": "^3.1.1",
     "create-index": "^2.3.0",
     "next": "^5.1.0",
     "pluralize": "^7.0.0",
     "react": "^16.2.0",
+    "react-click-outside": "^3.0.1",
     "react-dom": "^16.2.0",
+    "react-ratio": "^0.1.5",
+    "react-resize-to-aspect-ratio": "^1.0.7",
     "require-all": "^2.2.0"
   },
   "scripts": {
-    "start": "yarn index && node server.js",
     "index": "node create-index.js",
-    "build": "yarn index && next build && yarn export && yarn admin",
+    "styles": "tailwind build styles.css -o static/main.css -c tailwind.js",
+    "build": "yarn index && yarn styles && next build && yarn export && yarn admin",
     "export": "next export",
     "serve": "serve --port 8080 out",
     "admin": "cp -r admin out/admin",
+    "start": "yarn index && yarn styles && node server.js",
     "static": "yarn build && yarn serve"
   },
   "devDependencies": {
     "copy-webpack-plugin": "^4.5.1",
     "express": "^4.16.3",
-    "serve": "^6.5.3"
+    "serve": "^6.5.3",
+    "tailwindcss": "^0.5.2"
   }
 }

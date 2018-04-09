@@ -1,8 +1,7 @@
-import Nav from '../components/Nav'
+import Page from 'components/layouts/Page'
 
 export default () => (
-  <div>
-    <Nav />
-    <p>This is the about page</p>
-  </div>
+  <Page>
+  	<p>This is the about page</p>
+  </Page>
 )

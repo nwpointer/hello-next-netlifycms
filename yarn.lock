@@ -256,6 +256,17 @@ atob@^2.0.0:
   version "2.0.3"
   resolved "https://registry.npmjs.org/atob/-/atob-2.0.3.tgz#19c7a760473774468f20b2d2d03372ad7d4cbf5d"
 
+autoprefixer@^8.2.0:
+  version "8.2.0"
+  resolved "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-8.2.0.tgz#1e49b611b31a5259b86b7a6b2b1b8faf091abe2a"
+  dependencies:
+    browserslist "^3.2.0"
+    caniuse-lite "^1.0.30000817"
+    normalize-range "^0.1.2"
+    num2fraction "^1.2.2"
+    postcss "^6.0.20"
+    postcss-value-parser "^3.2.3"
+
 aws-sign2@~0.6.0:
   version "0.6.0"
   resolved "https://registry.npmjs.org/aws-sign2/-/aws-sign2-0.6.0.tgz#14342dd38dbcc94d0e5b87d763cd63612c0e794f"
@@ -437,6 +448,16 @@ babel-plugin-check-es2015-constants@^6.22.0:
   resolved "https://registry.npmjs.org/babel-plugin-check-es2015-constants/-/babel-plugin-check-es2015-constants-6.22.0.tgz#35157b101426fd2ffd3da3f75c7d1e91835bbf8a"
   dependencies:
     babel-runtime "^6.22.0"
+
+babel-plugin-module-resolver@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/babel-plugin-module-resolver/-/babel-plugin-module-resolver-3.1.1.tgz#881cf67e3d4b8400d5eaaefc1be44d2dc1fe404f"
+  dependencies:
+    find-babel-config "^1.1.0"
+    glob "^7.1.2"
+    pkg-up "^2.0.0"
+    reselect "^3.0.1"
+    resolve "^1.4.0"
 
 babel-plugin-react-require@3.0.0:
   version "3.0.0"
@@ -1016,6 +1037,13 @@ browserslist@^2.1.2:
     caniuse-lite "^1.0.30000792"
     electron-to-chromium "^1.3.30"
 
+browserslist@^3.2.0:
+  version "3.2.4"
+  resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-3.2.4.tgz#fb9ad70fd09875137ae943a31ab815ed76896031"
+  dependencies:
+    caniuse-lite "^1.0.30000821"
+    electron-to-chromium "^1.3.41"
+
 buffer-from@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/buffer-from/-/buffer-from-1.0.0.tgz#4cb8832d23612589b0406e9e2956c17f06fdf531"
@@ -1076,6 +1104,10 @@ cache-base@^1.0.1:
     union-value "^1.0.0"
     unset-value "^1.0.0"
 
+camelcase-css@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/camelcase-css/-/camelcase-css-1.0.1.tgz#157c4238265f5cf94a1dffde86446552cbf3f705"
+
 camelcase@4.1.0, camelcase@^4.0.0, camelcase@^4.1.0:
   version "4.1.0"
   resolved "https://registry.npmjs.org/camelcase/-/camelcase-4.1.0.tgz#d545635be1e33c542649c69173e5de6acfae34dd"
@@ -1091,6 +1123,10 @@ camelcase@^3.0.0:
 caniuse-lite@^1.0.30000792:
   version "1.0.30000820"
   resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30000820.tgz#6e36ee75187a2c83d26d6504a1af47cc580324d2"
+
+caniuse-lite@^1.0.30000817, caniuse-lite@^1.0.30000821:
+  version "1.0.30000823"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000823.tgz#b79842a5b5a48eaa416b73f5a5d7a23f52d26014"
 
 capture-stack-trace@^1.0.0:
   version "1.0.0"
@@ -1127,7 +1163,7 @@ chalk@2.3.0:
     escape-string-regexp "^1.0.5"
     supports-color "^4.0.0"
 
-chalk@2.3.2, chalk@^2.0.1:
+chalk@2.3.2, chalk@^2.0.1, chalk@^2.3.2:
   version "2.3.2"
   resolved "https://registry.npmjs.org/chalk/-/chalk-2.3.2.tgz#250dc96b07491bfd601e648d66ddf5f60c7a5c65"
   dependencies:
@@ -1241,9 +1277,17 @@ combined-stream@^1.0.5, combined-stream@~1.0.5:
   dependencies:
     delayed-stream "~1.0.0"
 
+commander@^2.11.0:
+  version "2.15.1"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-2.15.1.tgz#df46e867d0fc2aec66a34662b406a9ccafff5b0f"
+
 commander@~2.14.1:
   version "2.14.1"
   resolved "https://registry.npmjs.org/commander/-/commander-2.14.1.tgz#2235123e37af8ca3c65df45b026dbd357b01b9aa"
+
+comment-regex@^1.0.0:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/comment-regex/-/comment-regex-1.0.1.tgz#e070d2c4db33231955d0979d27c918fcb6f93565"
 
 commondir@^1.0.1:
   version "1.0.1"
@@ -1412,6 +1456,14 @@ create-index@^2.3.0:
     moment "^2.15.2"
     yargs "^6.3.0"
 
+create-react-class@^15.6.0:
+  version "15.6.3"
+  resolved "https://registry.yarnpkg.com/create-react-class/-/create-react-class-15.6.3.tgz#2d73237fb3f970ae6ebe011a9e66f46dbca80036"
+  dependencies:
+    fbjs "^0.8.9"
+    loose-envify "^1.3.1"
+    object-assign "^4.1.1"
+
 cross-spawn@5.1.0, cross-spawn@^5.0.1:
   version "5.1.0"
   resolved "https://registry.npmjs.org/cross-spawn/-/cross-spawn-5.1.0.tgz#e8bd0efee58fcff6f8f94510a0a554bbfa235449"
@@ -1514,6 +1566,10 @@ define-property@^2.0.2:
     is-descriptor "^1.0.2"
     isobject "^3.0.1"
 
+defined@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/defined/-/defined-1.0.0.tgz#c98d9bcef75674188e110969151199e39b1fa693"
+
 del@3.0.0:
   version "3.0.0"
   resolved "https://registry.npmjs.org/del/-/del-3.0.0.tgz#53ecf699ffcbcb39637691ab13baf160819766e5"
@@ -1604,7 +1660,7 @@ domain-browser@^1.1.1:
   version "1.2.0"
   resolved "https://registry.npmjs.org/domain-browser/-/domain-browser-1.2.0.tgz#3d31f50191a6749dd1375a7f522e823d42e54eda"
 
-dot-prop@^4.1.0:
+dot-prop@^4.1.0, dot-prop@^4.1.1:
   version "4.2.0"
   resolved "https://registry.npmjs.org/dot-prop/-/dot-prop-4.2.0.tgz#1f19e0c2e1aa0e32797c49799f2837ac6af69c57"
   dependencies:
@@ -1633,9 +1689,13 @@ ee-first@1.1.1:
   version "1.1.1"
   resolved "https://registry.npmjs.org/ee-first/-/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
 
-electron-to-chromium@^1.3.30:
+electron-to-chromium@^1.3.30, electron-to-chromium@^1.3.41:
   version "1.3.41"
   resolved "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.3.41.tgz#7e33643e00cd85edfd17e04194f6d00e73737235"
+
+element-resize-event@^2.0.7:
+  version "2.0.9"
+  resolved "https://registry.yarnpkg.com/element-resize-event/-/element-resize-event-2.0.9.tgz#2f5e1581a296eb5275210c141bc56342e218f876"
 
 elliptic@^6.0.0:
   version "6.4.0"
@@ -1927,7 +1987,7 @@ fast-levenshtein@^2.0.6:
   version "2.0.6"
   resolved "https://registry.npmjs.org/fast-levenshtein/-/fast-levenshtein-2.0.6.tgz#3d8a5c66883a16a30ca8643e851f19baa7797917"
 
-fbjs@^0.8.16:
+fbjs@^0.8.16, fbjs@^0.8.9:
   version "0.8.16"
   resolved "https://registry.npmjs.org/fbjs/-/fbjs-0.8.16.tgz#5e67432f550dc41b572bf55847b8aca64e5337db"
   dependencies:
@@ -1963,6 +2023,13 @@ finalhandler@1.1.1:
     parseurl "~1.3.2"
     statuses "~1.4.0"
     unpipe "~1.0.0"
+
+find-babel-config@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/find-babel-config/-/find-babel-config-1.1.0.tgz#acc01043a6749fec34429be6b64f542ebb5d6355"
+  dependencies:
+    json5 "^0.5.1"
+    path-exists "^3.0.0"
 
 find-cache-dir@^1.0.0:
   version "1.0.0"
@@ -2053,6 +2120,14 @@ fs-extra@5.0.0:
     jsonfile "^4.0.0"
     universalify "^0.1.0"
 
+fs-extra@^4.0.2:
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-4.0.3.tgz#0d852122e5bc5beb453fb028e9c0c9bf36340c94"
+  dependencies:
+    graceful-fs "^4.1.2"
+    jsonfile "^4.0.0"
+    universalify "^0.1.0"
+
 fs-write-stream-atomic@^1.0.8:
   version "1.0.10"
   resolved "https://registry.npmjs.org/fs-write-stream-atomic/-/fs-write-stream-atomic-1.0.10.tgz#b47df53493ef911df75731e70a9ded0189db40c9"
@@ -2093,6 +2168,10 @@ fstream@^1.0.0, fstream@^1.0.10, fstream@^1.0.2:
 function-bind@^1.0.2, function-bind@^1.1.1:
   version "1.1.1"
   resolved "https://registry.npmjs.org/function-bind/-/function-bind-1.1.1.tgz#a56899d3ea3c9bab874bb9773b7c5ede92f4895d"
+
+gather-stream@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/gather-stream/-/gather-stream-1.0.0.tgz#b33994af457a8115700d410f317733cbe7a0904b"
 
 gauge@~2.7.3:
   version "2.7.4"
@@ -2243,6 +2322,10 @@ has-ansi@^2.0.0:
   dependencies:
     ansi-regex "^2.0.0"
 
+has-flag@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/has-flag/-/has-flag-1.0.0.tgz#9d9e793165ce017a00f00418c43f942a7b1d11fa"
+
 has-flag@^2.0.0:
   version "2.0.0"
   resolved "https://registry.npmjs.org/has-flag/-/has-flag-2.0.0.tgz#e8207af1cc7b30d446cc70b734b5e8be18f88d51"
@@ -2337,7 +2420,7 @@ hoist-non-react-statics@2.3.1:
   version "2.3.1"
   resolved "https://registry.npmjs.org/hoist-non-react-statics/-/hoist-non-react-statics-2.3.1.tgz#343db84c6018c650778898240135a1420ee22ce0"
 
-hoist-non-react-statics@^2.5.0:
+hoist-non-react-statics@^2.1.1, hoist-non-react-statics@^2.5.0:
   version "2.5.0"
   resolved "https://registry.npmjs.org/hoist-non-react-statics/-/hoist-non-react-statics-2.5.0.tgz#d2ca2dfc19c5a91c5a6615ce8e564ef0347e2a40"
 
@@ -2408,6 +2491,10 @@ import-lazy@^2.1.0:
 imurmurhash@^0.1.4:
   version "0.1.4"
   resolved "https://registry.npmjs.org/imurmurhash/-/imurmurhash-0.1.4.tgz#9218b9b2b928a238b13dc4fb6b6d576f231453ea"
+
+indexes-of@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/indexes-of/-/indexes-of-1.0.1.tgz#f30f716c8e2bd346c7b67d3df3915566a7c05607"
 
 indexof@0.0.1:
   version "0.0.1"
@@ -2665,6 +2752,10 @@ isomorphic-fetch@^2.1.1:
 isstream@~0.1.2:
   version "0.1.2"
   resolved "https://registry.npmjs.org/isstream/-/isstream-0.1.2.tgz#47e63f7af55afa6f92e1500e690eb8b8529c099a"
+
+js-base64@^2.1.9:
+  version "2.4.3"
+  resolved "https://registry.yarnpkg.com/js-base64/-/js-base64-2.4.3.tgz#2e545ec2b0f2957f41356510205214e98fad6582"
 
 js-tokens@^3.0.0, js-tokens@^3.0.2:
   version "3.0.2"
@@ -3222,6 +3313,10 @@ normalize-path@^2.1.1:
   dependencies:
     remove-trailing-separator "^1.0.1"
 
+normalize-range@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/normalize-range/-/normalize-range-0.1.2.tgz#2d10c06bdfd312ea9777695a4d28439456b75942"
+
 npm-run-path@^2.0.0:
   version "2.0.2"
   resolved "https://registry.npmjs.org/npm-run-path/-/npm-run-path-2.0.2.tgz#35a9232dfa35d7067b4cb2ddf2357b1871536c5f"
@@ -3236,6 +3331,10 @@ npmlog@^4.0.2:
     console-control-strings "~1.1.0"
     gauge "~2.7.3"
     set-blocking "~2.0.0"
+
+num2fraction@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/num2fraction/-/num2fraction-1.2.2.tgz#6f682b6a027a4e9ddfa4564cd2589d1d4e669ede"
 
 number-is-nan@^1.0.0:
   version "1.0.1"
@@ -3489,6 +3588,21 @@ pbkdf2@^3.0.3:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
+perfectionist@^2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/perfectionist/-/perfectionist-2.4.0.tgz#c147ad3714e126467f1764129ee72df861d47ea0"
+  dependencies:
+    comment-regex "^1.0.0"
+    defined "^1.0.0"
+    minimist "^1.2.0"
+    postcss "^5.0.8"
+    postcss-scss "^0.3.0"
+    postcss-value-parser "^3.3.0"
+    read-file-stdin "^0.2.0"
+    string.prototype.repeat "^0.2.0"
+    vendors "^1.0.0"
+    write-file-stdout "0.0.2"
+
 performance-now@^0.2.0:
   version "0.2.0"
   resolved "https://registry.npmjs.org/performance-now/-/performance-now-0.2.0.tgz#33ef30c5c77d4ea21c5a53869d91b56d8f2555e5"
@@ -3517,6 +3631,12 @@ pkg-dir@^2.0.0:
   dependencies:
     find-up "^2.1.0"
 
+pkg-up@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/pkg-up/-/pkg-up-2.0.0.tgz#c819ac728059a461cab1c3889a2be3c49a004d7f"
+  dependencies:
+    find-up "^2.1.0"
+
 pkginfo@0.4.1:
   version "0.4.1"
   resolved "https://registry.npmjs.org/pkginfo/-/pkginfo-0.4.1.tgz#b5418ef0439de5425fc4995042dced14fb2a84ff"
@@ -3528,6 +3648,64 @@ pluralize@^7.0.0:
 posix-character-classes@^0.1.0:
   version "0.1.1"
   resolved "https://registry.npmjs.org/posix-character-classes/-/posix-character-classes-0.1.1.tgz#01eac0fe3b5af71a2a6c02feabb8c1fef7e00eab"
+
+postcss-functions@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/postcss-functions/-/postcss-functions-3.0.0.tgz#0e94d01444700a481de20de4d55fb2640564250e"
+  dependencies:
+    glob "^7.1.2"
+    object-assign "^4.1.1"
+    postcss "^6.0.9"
+    postcss-value-parser "^3.3.0"
+
+postcss-js@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/postcss-js/-/postcss-js-1.0.1.tgz#ffaf29226e399ea74b5dce02cab1729d7addbc7b"
+  dependencies:
+    camelcase-css "^1.0.1"
+    postcss "^6.0.11"
+
+postcss-nested@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/postcss-nested/-/postcss-nested-3.0.0.tgz#cde40bd07a078565f3df72e2dc2665871c724852"
+  dependencies:
+    postcss "^6.0.14"
+    postcss-selector-parser "^3.1.1"
+
+postcss-scss@^0.3.0:
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/postcss-scss/-/postcss-scss-0.3.1.tgz#65c610d8e2a7ee0e62b1835b71b8870734816e4b"
+  dependencies:
+    postcss "^5.2.4"
+
+postcss-selector-parser@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/postcss-selector-parser/-/postcss-selector-parser-3.1.1.tgz#4f875f4afb0c96573d5cf4d74011aee250a7e865"
+  dependencies:
+    dot-prop "^4.1.1"
+    indexes-of "^1.0.1"
+    uniq "^1.0.1"
+
+postcss-value-parser@^3.2.3, postcss-value-parser@^3.3.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/postcss-value-parser/-/postcss-value-parser-3.3.0.tgz#87f38f9f18f774a4ab4c8a232f5c5ce8872a9d15"
+
+postcss@^5.0.8, postcss@^5.2.4:
+  version "5.2.18"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-5.2.18.tgz#badfa1497d46244f6390f58b319830d9107853c5"
+  dependencies:
+    chalk "^1.1.3"
+    js-base64 "^2.1.9"
+    source-map "^0.5.6"
+    supports-color "^3.2.3"
+
+postcss@^6.0.11, postcss@^6.0.14, postcss@^6.0.20, postcss@^6.0.9:
+  version "6.0.21"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-6.0.21.tgz#8265662694eddf9e9a5960db6da33c39e4cd069d"
+  dependencies:
+    chalk "^2.3.2"
+    source-map "^0.6.1"
+    supports-color "^5.3.0"
 
 prepend-http@^1.0.1:
   version "1.0.4"
@@ -3569,6 +3747,14 @@ prop-types-exact@1.1.1:
 prop-types@15.6.0, prop-types@^15.6.0:
   version "15.6.0"
   resolved "https://registry.npmjs.org/prop-types/-/prop-types-15.6.0.tgz#ceaf083022fc46b4a35f69e13ef75aed0d639856"
+  dependencies:
+    fbjs "^0.8.16"
+    loose-envify "^1.3.1"
+    object-assign "^4.1.1"
+
+prop-types@^15.5.10:
+  version "15.6.1"
+  resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.6.1.tgz#36644453564255ddda391191fb3a125cbdf654ca"
   dependencies:
     fbjs "^0.8.16"
     loose-envify "^1.3.1"
@@ -3677,6 +3863,12 @@ rc@^1.0.1, rc@^1.1.6, rc@^1.1.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
+react-click-outside@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/react-click-outside/-/react-click-outside-3.0.1.tgz#6e77e84d2f17afaaac26dbad743cbbf909f5e24c"
+  dependencies:
+    hoist-non-react-statics "^2.1.1"
+
 react-dom@^16.2.0:
   version "16.2.0"
   resolved "https://registry.npmjs.org/react-dom/-/react-dom-16.2.0.tgz#69003178601c0ca19b709b33a83369fe6124c044"
@@ -3696,6 +3888,29 @@ react-hot-loader@4.0.0:
     prop-types "^15.6.0"
     shallowequal "^1.0.2"
 
+react-ratio@^0.1.5:
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/react-ratio/-/react-ratio-0.1.5.tgz#32660a0e2d02ad7f507dc30f5039461c4fedbe46"
+  dependencies:
+    prop-types "^15.6.0"
+
+react-resize-to-aspect-ratio@^1.0.7:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/react-resize-to-aspect-ratio/-/react-resize-to-aspect-ratio-1.0.7.tgz#367341e91de4c0bdc6099c64fa8bd0923e40f044"
+  dependencies:
+    element-resize-event "^2.0.7"
+    react "^15.4.2"
+
+react@^15.4.2:
+  version "15.6.2"
+  resolved "https://registry.yarnpkg.com/react/-/react-15.6.2.tgz#dba0434ab439cfe82f108f0f511663908179aa72"
+  dependencies:
+    create-react-class "^15.6.0"
+    fbjs "^0.8.9"
+    loose-envify "^1.1.0"
+    object-assign "^4.1.0"
+    prop-types "^15.5.10"
+
 react@^16.2.0:
   version "16.2.0"
   resolved "https://registry.npmjs.org/react/-/react-16.2.0.tgz#a31bd2dab89bff65d42134fa187f24d054c273ba"
@@ -3704,6 +3919,12 @@ react@^16.2.0:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
     prop-types "^15.6.0"
+
+read-file-stdin@^0.2.0:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/read-file-stdin/-/read-file-stdin-0.2.1.tgz#25eccff3a153b6809afacb23ee15387db9e0ee61"
+  dependencies:
+    gather-stream "^1.0.0"
 
 read-pkg-up@^1.0.1:
   version "1.0.1"
@@ -3882,6 +4103,10 @@ require-main-filename@^1.0.1:
   version "1.0.1"
   resolved "https://registry.npmjs.org/require-main-filename/-/require-main-filename-1.0.1.tgz#97f717b69d48784f5f526a6c5aa8ffdda055a4d1"
 
+reselect@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/reselect/-/reselect-3.0.1.tgz#efdaa98ea7451324d092b2b2163a6a1d7a9a2147"
+
 resolve-url@^0.2.1:
   version "0.2.1"
   resolved "https://registry.npmjs.org/resolve-url/-/resolve-url-0.2.1.tgz#2c637fe77c893afd2a663fe21aa9080068e2052a"
@@ -3889,6 +4114,12 @@ resolve-url@^0.2.1:
 resolve@1.5.0:
   version "1.5.0"
   resolved "https://registry.npmjs.org/resolve/-/resolve-1.5.0.tgz#1f09acce796c9a762579f31b2c1cc4c3cddf9f36"
+  dependencies:
+    path-parse "^1.0.5"
+
+resolve@^1.4.0:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.6.0.tgz#0fbd21278b27b4004481c395349e7aba60a9ff5c"
   dependencies:
     path-parse "^1.0.5"
 
@@ -4288,6 +4519,10 @@ string-width@^2.0.0, string-width@^2.1.1:
     is-fullwidth-code-point "^2.0.0"
     strip-ansi "^4.0.0"
 
+string.prototype.repeat@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/string.prototype.repeat/-/string.prototype.repeat-0.2.0.tgz#aba36de08dcee6a5a337d49b2ea1da1b28fc0ecf"
+
 string_decoder@^1.0.0:
   version "1.1.0"
   resolved "https://registry.npmjs.org/string_decoder/-/string_decoder-1.1.0.tgz#384f322ee8a848e500effde99901bba849c5d403"
@@ -4358,6 +4593,12 @@ supports-color@^2.0.0:
   version "2.0.0"
   resolved "https://registry.npmjs.org/supports-color/-/supports-color-2.0.0.tgz#535d045ce6b6363fa40117084629995e9df324c7"
 
+supports-color@^3.2.3:
+  version "3.2.3"
+  resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-3.2.3.tgz#65ac0504b3954171d8a64946b2ae3cbb8a5f54f6"
+  dependencies:
+    has-flag "^1.0.0"
+
 supports-color@^4.0.0, supports-color@^4.2.1:
   version "4.5.0"
   resolved "https://registry.npmjs.org/supports-color/-/supports-color-4.5.0.tgz#be7a0de484dec5c5cddf8b3d59125044912f635b"
@@ -4369,6 +4610,20 @@ supports-color@^5.3.0:
   resolved "https://registry.npmjs.org/supports-color/-/supports-color-5.3.0.tgz#5b24ac15db80fa927cf5227a4a33fd3c4c7676c0"
   dependencies:
     has-flag "^3.0.0"
+
+tailwindcss@^0.5.2:
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-0.5.2.tgz#eded994f26ee9715e2bb13ba82ed087637994e15"
+  dependencies:
+    commander "^2.11.0"
+    fs-extra "^4.0.2"
+    lodash "^4.17.4"
+    perfectionist "^2.4.0"
+    postcss "^6.0.9"
+    postcss-functions "^3.0.0"
+    postcss-js "^1.0.1"
+    postcss-nested "^3.0.0"
+    postcss-selector-parser "^3.1.1"
 
 tapable@^0.2.7:
   version "0.2.8"
@@ -4567,6 +4822,10 @@ union-value@^1.0.0:
     is-extendable "^0.1.1"
     set-value "^0.4.3"
 
+uniq@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/uniq/-/uniq-1.0.1.tgz#b31c5ae8254844a3a8281541ce2b04b865a734ff"
+
 unique-filename@^1.1.0:
   version "1.1.0"
   resolved "https://registry.npmjs.org/unique-filename/-/unique-filename-1.1.0.tgz#d05f2fe4032560871f30e93cbe735eea201514f3"
@@ -4679,6 +4938,10 @@ validate-npm-package-license@^3.0.1:
 vary@~1.1.2:
   version "1.1.2"
   resolved "https://registry.npmjs.org/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
+
+vendors@^1.0.0:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/vendors/-/vendors-1.0.1.tgz#37ad73c8ee417fb3d580e785312307d274847f22"
 
 verror@1.10.0:
   version "1.10.0"
@@ -4823,6 +5086,10 @@ write-file-atomic@^2.0.0:
     graceful-fs "^4.1.11"
     imurmurhash "^0.1.4"
     signal-exit "^3.0.2"
+
+write-file-stdout@0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/write-file-stdout/-/write-file-stdout-0.0.2.tgz#c252d7c7c5b1b402897630e3453c7bfe690d9ca1"
 
 write-file-webpack-plugin@4.2.0:
   version "4.2.0"

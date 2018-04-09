@@ -3,8 +3,8 @@ const { singular } = require('pluralize');
 const { mapKeys } = require('lodash');
 const {mapContent, listFromRecords} = require('./mapContent');
 
-const root = '/_content'
-const content = require('require-all')(__dirname + root);
+const root = 'content'
+const content = require('require-all')(__dirname + '/' + root);
 
 switchRequireTemplate = (records, type) => (
 `module.exports = {
@@ -25,16 +25,16 @@ const route = type => record => `
 `
 
 const switchCases = type => record => `
-			case '${record.slug}': return require('..${root}/${type}/${record.slug}.json');
+			case '${record.slug}': return require('${root}/${type}/${record.slug}.json');
 `
 
 mapKeys(content, (records, type) => {
 	if(Object.keys(records).length){
 		const json = JSON.stringify(records)
-		fs.writeFileSync(__dirname + root + `/${type}.json`, json);
+		fs.writeFileSync(__dirname + '/' + root + `/${type}.json`, json);
 		
 		const text = switchRequireTemplate(records, type)	
-		fs.writeFileSync(__dirname + root + `/${type}.js`, text);
+		fs.writeFileSync(__dirname + '/' + root + `/${type}.js`, text);
 	}
 })
 
