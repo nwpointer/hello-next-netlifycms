@@ -20,7 +20,7 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
 
   - name: "testimonial" # Used in routes, e.g., /admin/collections/blog
-    label: "Testimonial" # Used in the UI
+    label: "Testimonials" # Used in the UI
     format: "json"
     folder: "content/testimonials" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
@@ -29,3 +29,15 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "content/pages/home.json"
+        label: "Home"
+        format: "json"
+        name: "home"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}

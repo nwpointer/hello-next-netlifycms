@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/bin/yarn style
+  /usr/local/bin/node /usr/local/bin/yarn static
 
 PATH: 
   /usr/local/Cellar/smlnj/110.74/libexec/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/DevDesktop/drush
@@ -35,12 +35,12 @@ npm manifest:
     },
     "scripts": {
       "index": "node create-index.js",
-      "styles": "tailwind build styles.css -o static/main.css",
+      "styles": "tailwind build styles.css -o static/main.css -c tailwind.js",
       "build": "yarn index && yarn styles && next build && yarn export && yarn admin",
       "export": "next export",
       "serve": "serve --port 8080 out",
       "admin": "cp -r admin out/admin",
-      "start": "yarn index && node server.js",
+      "start": "yarn index && yarn styles && node server.js",
       "static": "yarn build && yarn serve"
     },
     "devDependencies": {
@@ -5237,14 +5237,17 @@ Lockfile:
       window-size "0.1.0"
 
 Trace: 
-  Error: Command "style" not found. Did you mean "styles"?
-      at new MessageError (/usr/local/lib/node_modules/yarn/lib/cli.js:186:110)
-      at /usr/local/lib/node_modules/yarn/lib/cli.js:87307:17
-      at Generator.next (<anonymous>)
-      at step (/usr/local/lib/node_modules/yarn/lib/cli.js:98:30)
-      at /usr/local/lib/node_modules/yarn/lib/cli.js:116:14
-      at new Promise (<anonymous>)
-      at new F (/usr/local/lib/node_modules/yarn/lib/cli.js:23451:28)
-      at /usr/local/lib/node_modules/yarn/lib/cli.js:95:12
-      at runCommand (/usr/local/lib/node_modules/yarn/lib/cli.js:87312:22)
-      at Object.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:87412:14)
+  Error: Command failed.
+  Exit code: 1
+  Command: sh
+  Arguments: -c yarn build && yarn serve
+  Directory: /Users/admin/Desktop/Code/hello-next-netlifycms
+  Output:
+  
+      at ProcessTermError.MessageError (/usr/local/lib/node_modules/yarn/lib/cli.js:186:110)
+      at new ProcessTermError (/usr/local/lib/node_modules/yarn/lib/cli.js:226:113)
+      at ChildProcess.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:30281:17)
+      at emitTwo (events.js:126:13)
+      at ChildProcess.emit (events.js:214:7)
+      at maybeClose (internal/child_process.js:925:16)
+      at Process.ChildProcess._handle.onexit (internal/child_process.js:209:5)
