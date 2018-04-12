@@ -38,6 +38,11 @@ collections:
         format: "json"
         name: "home"
         fields:
-          - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}
+          - label: "Hero"
+            name: "hero"
+            widget: "object" 
+            fields:
+              - {label: "Primary Text", name: "primary", widget: "string"}
+              - {label: "Secondary Text", name: "secondary", widget: "string"}
+              - {label: "Button Text", name: "button", widget: "string"}
+              - {label: "Background", name: "background", widget: "image"}

@@ -6,8 +6,8 @@ const {mapContent, listFromRecords} = require('./mapContent');
 const rootName = 'content'
 const root = __dirname + '/' + rootName
 
-// cleans up old indexes
-filesInDirectory(root).map(fs.unlinkSync)
+// deletes old indexes so require all doesn't require stale data
+deleteAll(filesInDirectory(root))
 // reads content for new indexes
 const content = require('require-all')(root);
 
@@ -34,6 +34,7 @@ const switchCases = type => record => `
 			case '${record.slug}': return require('${rootName}/${type}/${record.slug}.json');
 `
 
+// saves compiled index templates
 mapKeys(content, (records, type) => {
 	if(Object.keys(records).length){
 		const json = JSON.stringify(records)
@@ -43,6 +44,10 @@ mapKeys(content, (records, type) => {
 		fs.writeFileSync(root + `/${type}.js`, text);
 	}
 })
+
+function deleteAll(files){
+	files.map(fs.unlinkSync)
+}
 
 function filesInDirectory(dir){
 	return fs.readdirSync(dir)
