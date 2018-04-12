@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/bin/yarn static
+  /usr/local/bin/node /usr/local/bin/yarn index
 
 PATH: 
   /usr/local/Cellar/smlnj/110.74/libexec/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/DevDesktop/drush
@@ -5240,7 +5240,7 @@ Trace:
   Error: Command failed.
   Exit code: 1
   Command: sh
-  Arguments: -c yarn build && yarn serve
+  Arguments: -c node create-index.js
   Directory: /Users/admin/Desktop/Code/hello-next-netlifycms
   Output:
   

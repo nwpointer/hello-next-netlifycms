@@ -15,6 +15,8 @@ app.prepare()
       app.render(req, res, actualPage, queryParams)
     })
 
+    server.use('/admin', express.static('admin'))
+
     server.get('*', (req, res) => {
       return handle(req, res)
     })
