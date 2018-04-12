@@ -1,4 +1,8 @@
 {
-  "title": "home",
-  "body": "ya ya ya"
+  "hero": {
+    "Primary text": "You Deserve peace of mind",
+    "Secondary text": "for both you & your baby",
+    "button text": "explore our services",
+    "background": "/static/img/uploads/newborn_baby_feet_basket_young_delicate_toes_small-622315.jpg"
+  }
 }
