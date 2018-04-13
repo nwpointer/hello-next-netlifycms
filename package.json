@@ -8,6 +8,7 @@
     "autoprefixer": "^8.2.0",
     "babel-plugin-module-resolver": "^3.1.1",
     "create-index": "^2.3.0",
+    "lodash": "^4.17.5",
     "next": "^5.1.0",
     "pluralize": "^7.0.0",
     "react": "^16.2.0",

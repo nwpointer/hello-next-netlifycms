@@ -5,6 +5,7 @@ import Hero from 'components/Hero'
 import Page from 'components/layouts/Page'
 import { listFromRecords} from '../mapContent'
 import testimonials from 'content/testimonials.json'
+import posts from 'content/posts.json'
 import services from 'content/services.json'
 import pageContent from 'content/pages/home.json';
 
@@ -28,6 +29,23 @@ const ServiceItem = ({title,description, price, icon}) => (
     </div>
     <div className="flex text-blue-darker flex-col justify-center ml-auto ">
       <div className="text-xl san-serif ml-4"><b>{formatAsMoney(price)}</b></div>
+    </div>
+  </div>
+)
+
+const PostPreview = ({title, body, thumbnail, hideOnSmall})=>(
+  <div className={`mx-auto sm:w-1/2 lg:w-1/3 px-2 mb-4 ${ hideOnSmall ? 'sm:hidden lg:inline':''} `}>
+    <div className="h-full bg-white hover:-mt-2 transition-fast flex flex-col rounded shadow hover:shadow-lg">
+      <img className="rounded-t" src="/static/img/uploads/safe_image.jpg" alt=""/>
+      <div className="p-8 flex flex-col flex-1">
+        <h2 className="mb-2 serif">New Guidelines Establish The Rights Of Women When Giving Birth</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate modi similique fugiat eaque </p>
+        <br/>
+        <a className="mt-auto text-blue-dark no-underline hover:text-blue" href="/">
+          read more
+          <i className="fas ml-1 fa-angle-right "></i>
+        </a>
+      </div>
     </div>
   </div>
 )
@@ -111,18 +129,9 @@ export default class extends Component {
                 <div className="text-left">Service:</div>
                 <select style={{height:"34px"}} className="bg-grey-lighter p-2 mb-4 mt-2 rounded border w-full">
                   <option value="0">Select Service:</option>
-                  <option value="1">Audi</option>
-                  <option value="2">BMW</option>
-                  <option value="3">Citroen</option>
-                  <option value="4">Ford</option>
-                  <option value="5">Honda</option>
-                  <option value="6">Jaguar</option>
-                  <option value="7">Land Rover</option>
-                  <option value="8">Mercedes</option>
-                  <option value="9">Mini</option>
-                  <option value="10">Nissan</option>
-                  <option value="11">Toyota</option>
-                  <option value="12">Volvo</option>
+                  {
+                    listFromRecords(services).map(s => <option value={s.title}>{s.title}</option>)
+                  }
                 </select>
                 <div className="text-left">Ideal Date:</div>
                 <input style={{height:"34px"}} className="bg-grey-lighter p-2 mb-4 mt-2 rounded border w-full" type="date" />
@@ -142,48 +151,9 @@ export default class extends Component {
           <p className="text-center text-brown-light pb-8 px-4 poppins">"Before anything else, preparation is the key to success."</p>
             <div className="container mx-auto px-2 mt-4">
             <div className="flex flex-wrap -mx-2 px-2">
-              <div className="mx-auto sm:w-1/2 lg:w-1/3 px-2 mb-4">
-                <div className="h-full bg-white hover:-mt-2 transition-fast flex flex-col rounded shadow hover:shadow-lg">
-                  <img className="rounded-t" src="/static/img/uploads/safe_image.jpg" alt=""/>
-                  <div className="p-8 flex flex-col flex-1">
-                    <h2 className="mb-2 serif">New Guidelines Establish The Rights Of Women When Giving Birth</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate modi similique fugiat eaque </p>
-                    <br/>
-                    <a className="mt-auto text-blue-dark no-underline hover:text-blue" href="/">
-                      read more
-                      <i className="fas ml-1 fa-angle-right "></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className="mx-auto sm:w-1/2 lg:w-1/3 px-2 mb-4">
-                <div className="h-full bg-white hover:-mt-2 transition-fast flex flex-col rounded shadow hover:shadow-lg">
-                  <img className="rounded-t" src="/static/img/uploads/safe_image-1.jpg" alt=""/>
-                  <div className="p-8 flex flex-col flex-1">
-                    <h2 className="mb-2 serif">Doula Support For Pregnant Women Could Improve Care, Reduce Costs</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum at, culpa inventore quis, </p>
-                    <br/>
-                    <a className="mt-auto text-blue-dark no-underline hover:text-blue" href="/">
-                      read more
-                      <i className="fas ml-1 fa-angle-right "></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className="mx-auto sm:w-1/2 md:w-1/3 px-2 mb-4 sm:hidden lg:inline">
-                <div className="h-full bg-white hover:-mt-2 transition-fast flex flex-col rounded shadow hover:shadow-lg">
-                  <img className="rounded-t" src="/static/img/uploads/safe_image-2.jpg" alt=""/>
-                  <div className="p-8 flex flex-col flex-1">
-                    <h2 className="mb-2 serif">Having A Doula: Their Benefits And Purpose</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae blanditiis doloremque, officiis aliquam </p>
-                    <br/>
-                    <a className="mt-auto text-blue-dark no-underline hover:text-blue" href="/">
-                      read more
-                      <i className="fas ml-1 fa-angle-right "></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
+              { PostPreview(listFromRecords(posts)[0]) }
+              { PostPreview(listFromRecords(posts)[1]) }
+              { PostPreview({...listFromRecords(posts)[2], hideOnSmall:true}) }
             </div>
             <div className="text-center mx-auto mt-8">
               <a className="tracking-wide rounded no-underline bg-blue-darker poppins uppercase hover:bg-blue-darkest text-white text-sm py-4 px-6 border-2 border-blue-darker" href="/blog">read more posts</a>
