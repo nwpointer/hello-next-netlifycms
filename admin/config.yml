@@ -5,7 +5,7 @@ backend:
 media_folder: "static/img/uploads"
 
 collections:
-  - name: "post" # Used in routes, e.g., /admin/collections/blog
+  - name: "posts" # Used in routes, e.g., /admin/collections/blog
     label: "Post" # Used in the UI
     format: "json"
     folder: "content/posts" # The path to the folder where the documents are stored
@@ -19,8 +19,20 @@ collections:
       - {label: "Rating (scale of 1-5)", name: "rating", widget: "number"}
       - {label: "Body", name: "body", widget: "markdown"}
 
-  - name: "testimonial" # Used in routes, e.g., /admin/collections/blog
-    label: "Testimonials" # Used in the UI
+  - name: "services"
+    label: "Service"
+    format: "json"
+    create: true 
+    folder: "content/services"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "string"}
+      - {label: "price (in cents)", name: "price", widget: "number"}
+      - {label: "Icon", name: "icon", widget: "image", required: false}
+
+
+  - name: "testimonials" # Used in routes, e.g., /admin/collections/blog
+    label: "Testimonial" # Used in the UI
     format: "json"
     folder: "content/testimonials" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
@@ -32,6 +44,8 @@ collections:
 
   - name: "pages"
     label: "Pages"
+    editor:
+         preview: false
     files:
       - file: "content/pages/home.json"
         label: "Home"
@@ -46,3 +60,10 @@ collections:
               - {label: "Secondary Text", name: "secondary", widget: "string"}
               - {label: "Button Text", name: "button", widget: "string"}
               - {label: "Background", name: "background", widget: "image"}
+          - label: "Follow up"
+            name: "followUp"
+            widget: "object" 
+            fields:
+              - {label: "Primary Text", name: "primary", widget: "string"}
+              - {label: "Secondary Text", name: "secondary", widget: "string"}
+
