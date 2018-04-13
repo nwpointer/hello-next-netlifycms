@@ -5,27 +5,29 @@ import Hero from 'components/Hero'
 import Page from 'components/layouts/Page'
 import { listFromRecords} from '../mapContent'
 import testimonials from 'content/testimonials.json'
+import services from 'content/services.json'
 import pageContent from 'content/pages/home.json';
 
 const Testimonial = ({body}, i) => {
   return <div key={i}>{body}</div>
 }
 
+const formatAsMoney = (price, currency="$") => currency+(price/100).toFixed(2)
 
 
 // <div className="container mx-auto">
 //   { listFromRecords(testimonials).map(Testimonial)}
 // </div>
 
-const ServiceItem = ({name,description, img}) => (
+const ServiceItem = ({title,description, price, icon}) => (
   <div className="flex md:w-1/2 md:text-lg rounded hover:shadow bg-white hover:border-blue-lighter border-white border-grey-light border p-2 mb-4 mx-auto md:w-3/4">
-    <img className="shadow-md rounded-full border-2 border-white h-16" src={img} />
+    { icon && <img className="shadow-md rounded-full border-2 border-white h-16 w-16" src={icon} />}
     <div className="flex flex-col justify-center ml-4">
-      <div className="text-grey-darkest"><b>{name}</b></div>
+      <div className="text-grey-darkest"><b>{title}</b></div>
       <div className="hidden text-sm text-grey-darker md:block">{description}</div>
     </div>
     <div className="flex text-blue-darker flex-col justify-center ml-auto ">
-      <div className="text-xl san-serif ml-4"><b>$40.00</b></div>
+      <div className="text-xl san-serif ml-4"><b>{formatAsMoney(price)}</b></div>
     </div>
   </div>
 )
@@ -37,8 +39,9 @@ export default class extends Component {
         <Hero {...pageContent.hero} />
         <div className="info bg-tan-lightest text-brown pt-8 xl:pb-32">
           <div className="small-container poppins lg:text-xl leading-normal text-center  mx-auto pb-8">
-          <div>
-            <img className="shadow-md hidden rounded-full border-4 border-white h-32 mb-4" src="/static/img/rachel2-head.jpg" alt=""/></div>
+            <div>
+              <img className="shadow-md hidden rounded-full border-4 border-white h-32 mb-4" src="/static/img/rachel2-head.jpg" alt=""/>
+            </div>
             <div className="p-8">
               Your entire experience from pregnancy to parenthood should be memorable, put you and your partner at ease and leave you feeling wrapped in comfort. <br/> <br/> <b>Learn how we can support you:</b>
             </div>
@@ -47,32 +50,8 @@ export default class extends Component {
           <div className="lg:flex lg:flex-row-reverse shadow-lg mt-2 xl:w-3/4 mx-auto">
             <div className="w-full bg-white p-4 pb-16">
               <h1 className="mt-8 mb-8 md:pb-8 md:pt-8 text-center border-1 uppercase poppins font-black tracking-wide">our services</h1>
-              
-              <ServiceItem 
-                name="Post partum hourly packages"
-                description="bla bla ya know"
-                img="/static/img/rachel2-head.jpg"
-              />
-              <ServiceItem 
-                name="Pre and post birth consults" 
-                description="bla bla ya know"
-                img="/static/img/rachel2-head.jpg"
-              />
-              <ServiceItem 
-                name="Hand and foot massage" 
-                description="bla bla ya know"
-                img="/static/img/rachel2-head.jpg"
-              />
-              <ServiceItem 
-                name="belly sifting and rebozo work" 
-                description="bla bla ya know"
-                img="/static/img/rachel2-head.jpg"
-              />
-              <ServiceItem 
-                name="breastfeeding education" 
-                description="bla bla ya know"
-                img="/static/img/rachel2-head.jpg"
-              />
+              {console.log(services)}
+              { listFromRecords(services).map(ServiceItem) }
             </div>
             <div className="w-full bg-face flex flex-col p-8 text-white">
               <div className="mt-auto">
