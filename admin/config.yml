@@ -37,7 +37,7 @@ collections:
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}-{{year}}-{{month}}-{{day}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Name", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Body", name: "body", widget: "markdown"}
 
@@ -55,24 +55,47 @@ collections:
             name: "hero"
             widget: "object" 
             fields:
-              - {label: "Primary Text", name: "primary", widget: "string"}
-              - {label: "Secondary Text", name: "secondary", widget: "string"}
+              - {label: "Primary Text", name: "primaryText", widget: "string"}
+              - {label: "Secondary Text", name: "secondaryText", widget: "string"}
               - {label: "Button Text", name: "button", widget: "string"}
               - {label: "Background", name: "background", widget: "image"}
-          - label: "Featured Posts (pick 3)"
-            name: "posts"
-            widget: "list"
-            fields:
-              - label: "Post"
-                name: "post"
-                widget: "relation"
-                collection: "posts"
-                searchFields: ["title"]
-                valueField: "title"
-          - label: "Follow up"
-            name: "followUp"
+          - label: "Call to action"
+            name: "cta"
             widget: "object" 
             fields:
-              - {label: "Primary Text", name: "primary", widget: "string"}
-              - {label: "Secondary Text", name: "secondary", widget: "string"}
+              - {label: "Primary Text", name: "primaryText", widget: "string"}
+              - {label: "Secondary Text", name: "secondaryText", widget: "string"}
+          - label: "Testimonials"
+            name: "testimonials"
+            widget: "object"
+            fields:
+              - {label: "show", name: 'show', widget: "boolean"}
+              - label: "Featured Testimonials"
+                name: "testimonials"
+                widget: "list"
+                fields:
+                  - label: "Testimonial"
+                    name: "testimonials"
+                    widget: "relation"
+                    collection: "testimonials"
+                    searchFields: ["title"]
+                    valueField: "title"
+
+          - label: "Blog Posts"
+            name: "blog"
+            widget: "object"
+            fields:
+              - {label: "show", name: 'show', widget: "boolean"}
+              - {label: "title", name: 'title', widget: "string", default: "From the blog"}
+              - {label: "Sub title", name: 'subtitle', widget: "string", required: false}
+              - label: "Featured Posts (pick 3)"
+                name: "posts"
+                widget: "list"
+                fields:
+                  - label: "Post"
+                    name: "post"
+                    widget: "relation"
+                    collection: "posts"
+                    searchFields: ["title"]
+                    valueField: "title"    
 
