@@ -22,9 +22,9 @@
   "appointment": true,
   "blog": {
     "show": true,
-    "title": "FROM THE BLOG",
-    "subtitle": "\"Before anything else, preparation is the key to success.\"",
-    "posts": [
+    "primaryText": "FROM THE BLOG",
+    "secondaryText": "\"Before anything else, preparation is the key to success.\"",
+    "postTitles": [
       {
         "title": "Having A Doula: Their Benefits And Purpose"
       },

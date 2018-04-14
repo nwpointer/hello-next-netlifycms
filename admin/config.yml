@@ -69,7 +69,7 @@ collections:
             name: "testimonials"
             widget: "object"
             fields:
-              - {label: "show", name: 'show', widget: "boolean"}
+              - {label: "show", name: 'show', widget: "boolean", default: true}
               - label: "Featured Testimonials"
                 name: "testimonials"
                 widget: "list"
@@ -88,11 +88,11 @@ collections:
             name: "blog"
             widget: "object"
             fields:
-              - {label: "show", name: 'show', widget: "boolean"}
-              - {label: "title", name: 'title', widget: "string", default: "From the blog"}
-              - {label: "Sub title", name: 'subtitle', widget: "string", required: false}
+              - {label: "show", name: 'show', widget: "boolean", default: true}
+              - {label: "Primary text", name: 'primaryText', widget: "string", default: "From the blog"}
+              - {label: "Secondary Text", name: 'secondaryText', widget: "string", required: false}
               - label: "Featured Posts (pick 3)"
-                name: "posts"
+                name: "postTitles"
                 widget: "list"
                 fields:
                   - label: "Post"
