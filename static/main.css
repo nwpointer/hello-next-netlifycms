@@ -683,6 +683,16 @@ body {
   background: #f7f7ed;
 }
 
+.hover\:-pt-2 {
+  position: relative;
+  top: 0;
+}
+
+.hover\:-pt-2:hover {
+  position: relative;
+  top: -1em;
+}
+
 .poppins {
   font-family: 'Poppins', sans-serif;
 }

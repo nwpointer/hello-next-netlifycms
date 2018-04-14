@@ -15,11 +15,6 @@ const Testimonial = ({body}, i) => {
 
 const formatAsMoney = (price, currency="$") => currency+(price/100).toFixed(2)
 
-
-// <div className="container mx-auto">
-//   { listFromRecords(testimonials).map(Testimonial)}
-// </div>
-
 const ServiceItem = ({title,description, price, icon}) => (
   <div className="flex md:w-1/2 md:text-lg rounded hover:shadow bg-white hover:border-blue-lighter border-white border-grey-light border p-2 mb-4 mx-auto md:w-3/4">
     { icon && <img className="shadow-md rounded-full border-2 border-white h-16 w-16" src={icon} />}
@@ -33,19 +28,24 @@ const ServiceItem = ({title,description, price, icon}) => (
   </div>
 )
 
-const PostPreview = ({title, body, thumbnail, hideOnSmall})=>(
-  <div className={`mx-auto sm:w-1/2 lg:w-1/3 px-2 mb-4 ${ hideOnSmall ? 'sm:hidden lg:inline':''} `}>
-    <div className="h-full bg-white hover:-mt-2 transition-fast flex flex-col rounded shadow hover:shadow-lg">
-      <img className="rounded-t" src="/static/img/uploads/safe_image.jpg" alt=""/>
-      <div className="p-8 flex flex-col flex-1">
-        <h2 className="mb-2 serif">New Guidelines Establish The Rights Of Women When Giving Birth</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate modi similique fugiat eaque </p>
-        <br/>
-        <a className="mt-auto text-blue-dark no-underline hover:text-blue" href="/">
-          read more
-          <i className="fas ml-1 fa-angle-right "></i>
-        </a>
-      </div>
+const summary = n => body => {
+  const shortened = body.split(' ', n).join(' ')
+  return shortened.length < body.length
+    ? shortened + '...' 
+    : shortened
+}
+
+const PostPreview = ({title, body, thumbnail})=>(
+  <div className="h-full bg-white hover:-pt-2 transition-fast flex flex-col rounded shadow hover:shadow-lg">
+    <img className="rounded-t" src={thumbnail} alt=""/>
+    <div className="p-8 flex flex-col flex-1">
+      <h2 className="mb-2 serif">{title}</h2>
+      <p>{summary(10)(body)}</p>
+      <br/>
+      <a className="mt-auto text-blue-dark no-underline hover:text-blue" href="/">
+        read more
+        <i className="fas ml-1 fa-angle-right "></i>
+      </a>
     </div>
   </div>
 )
@@ -151,9 +151,15 @@ export default class extends Component {
           <p className="text-center text-brown-light pb-8 px-4 poppins">"Before anything else, preparation is the key to success."</p>
             <div className="container mx-auto px-2 mt-4">
             <div className="flex flex-wrap -mx-2 px-2">
-              { PostPreview(listFromRecords(posts)[0]) }
-              { PostPreview(listFromRecords(posts)[1]) }
-              { PostPreview({...listFromRecords(posts)[2], hideOnSmall:true}) }
+              <div className="mx-auto sm:w-1/2 lg:w-1/3 px-2 mb-4">
+                { PostPreview(listFromRecords(posts)[0]) }
+              </div>
+              <div className="mx-auto sm:w-1/2 lg:w-1/3 px-2 mb-4">
+                { PostPreview(listFromRecords(posts)[1]) }
+              </div>
+              <div className="mx-auto sm:w-1/2 lg:w-1/3 px-2 mb-4 sm:hidden lg:inline">
+                { PostPreview(listFromRecords(posts)[2]) }
+              </div>
             </div>
             <div className="text-center mx-auto mt-8">
               <a className="tracking-wide rounded no-underline bg-blue-darker poppins uppercase hover:bg-blue-darkest text-white text-sm py-4 px-6 border-2 border-blue-darker" href="/blog">read more posts</a>

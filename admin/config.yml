@@ -59,6 +59,16 @@ collections:
               - {label: "Secondary Text", name: "secondary", widget: "string"}
               - {label: "Button Text", name: "button", widget: "string"}
               - {label: "Background", name: "background", widget: "image"}
+          - label: "Featured Posts (pick 3)"
+            name: "posts"
+            widget: "list"
+            fields:
+              - label: "Post"
+                name: "post"
+                widget: "relation"
+                collection: "posts"
+                searchFields: ["title"]
+                valueField: "title"
           - label: "Follow up"
             name: "followUp"
             widget: "object" 
