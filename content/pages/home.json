@@ -10,6 +10,7 @@
     "secondaryText": "Learn how we can support you:"
   },
   "testimonials": {
+    "show": true,
     "testimonials": [
       {
         "title": "Jeorme"
