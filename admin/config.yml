@@ -75,12 +75,15 @@ collections:
                 widget: "list"
                 fields:
                   - label: "Testimonial"
-                    name: "testimonials"
+                    name: "title"
                     widget: "relation"
                     collection: "testimonials"
                     searchFields: ["title"]
                     valueField: "title"
-
+          - label: "Appointment form"
+            name: "appointment"
+            widget: "boolean"
+            default: true
           - label: "Blog Posts"
             name: "blog"
             widget: "object"
@@ -93,7 +96,7 @@ collections:
                 widget: "list"
                 fields:
                   - label: "Post"
-                    name: "post"
+                    name: "title"
                     widget: "relation"
                     collection: "posts"
                     searchFields: ["title"]

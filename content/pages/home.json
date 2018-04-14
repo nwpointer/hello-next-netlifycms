@@ -12,10 +12,10 @@
   "testimonials": {
     "testimonials": [
       {
-        "testimonials": "Jeorme"
+        "title": "Jeorme"
       },
       {
-        "testimonials": "Sally Bery"
+        "title": "Sally Bery"
       }
     ]
   },
@@ -26,13 +26,13 @@
     "subtitle": "\"Before anything else, preparation is the key to success.\"",
     "posts": [
       {
-        "post": "Having A Doula: Their Benefits And Purpose"
+        "title": "Having A Doula: Their Benefits And Purpose"
       },
       {
-        "post": "Doula Support For Pregnant Women Could Improve Care, Reduce Costs"
+        "title": "Doula Support For Pregnant Women Could Improve Care, Reduce Costs"
       },
       {
-        "post": "New Guidelines Establish The Rights Of Women When Giving Birth"
+        "title": "New Guidelines Establish The Rights Of Women When Giving Birth"
       }
     ]
   }
