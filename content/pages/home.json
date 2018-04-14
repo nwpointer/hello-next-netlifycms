@@ -1,8 +1,39 @@
 {
   "hero": {
-    "primary": "You Deserve peace of mind",
-    "secondary": "for both you & your baby",
+    "primaryText": "You Deserve peace of mind",
+    "secondaryText": "for both you & your baby",
     "button": "explore our services",
     "background": "/static/img/uploads/newborn_baby_feet_basket_young_delicate_toes_small-622315.jpg"
+  },
+  "cta": {
+    "primaryText": "Your entire experience from pregnancy to parenthood should be memorable, put you and your partner at ease and leave you feeling wrapped in comfort. ",
+    "secondaryText": "Learn how we can support you:"
+  },
+  "testimonials": {
+    "testimonials": [
+      {
+        "testimonials": "Jeorme"
+      },
+      {
+        "testimonials": "Sally Bery"
+      }
+    ]
+  },
+  "appointment": true,
+  "blog": {
+    "show": true,
+    "title": "FROM THE BLOG",
+    "subtitle": "\"Before anything else, preparation is the key to success.\"",
+    "posts": [
+      {
+        "post": "Having A Doula: Their Benefits And Purpose"
+      },
+      {
+        "post": "Doula Support For Pregnant Women Could Improve Care, Reduce Costs"
+      },
+      {
+        "post": "New Guidelines Establish The Rights Of Women When Giving Birth"
+      }
+    ]
   }
 }
