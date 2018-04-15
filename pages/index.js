@@ -6,11 +6,17 @@ import { Swipeable, defineSwipe } from 'react-touch';
 import Nav from 'components/Nav'
 import Hero from 'components/Hero'
 import Page from 'components/layouts/Page'
+import PostPreview from 'components/PostPreview'
+import {TanSection, BackgroundSection} from 'components/Containers'
 import { listFromRecords} from '../mapContent'
 import testimonials from 'content/testimonials.json'
 import posts from 'content/posts.json'
 import services from 'content/services.json'
 import pageContent from 'content/pages/home.json';
+
+function mod(n, m) {
+  return ((n % m) + m) % m;
+}
 
 const matches = (a,b)=>{
   return b.map(where => {
@@ -18,28 +24,6 @@ const matches = (a,b)=>{
     return Array.isArray(matches) && matches[0]
   })
 }
-
-const summary = n => body => {
-  const shortened = body.split(' ', n).join(' ')
-  return shortened.length < body.length
-    ? shortened + '...' 
-    : shortened
-}
-
-const PostPreview = ({title='title', body='body', thumbnail='/'})=>(
-  <div className="h-full bg-white hover:-pt-2 transition-fast flex flex-col rounded shadow hover:shadow-lg">
-    <img className="rounded-t" src={thumbnail} alt={thumbnail}/>
-    <div className="p-8 flex flex-col flex-1">
-      <h2 className="mb-2 serif">{title}</h2>
-      <p>{summary(10)(body)}</p>
-      <br/>
-      <a className="mt-auto text-blue-dark no-underline hover:text-blue" href="/">
-        read more
-        <i className="fas ml-1 fa-angle-right "></i>
-      </a>
-    </div>
-  </div>
-)
 
 const CallToAction = ({primaryText, secondaryText})=>(
   <div className="small-container pt-8 poppins lg:text-xl leading-normal text-center  mx-auto pb-8">
@@ -106,10 +90,6 @@ const Testimonial = ({name, date, text, picture}) => (
     </div>
   </div>
 )
-
-function mod(n, m) {
-  return ((n % m) + m) % m;
-}
 
 class TestimonialSection extends Component {
   constructor(props) {
@@ -258,24 +238,6 @@ const Hideable = ({show, className, children})=> (
   <div className={className} style={show ? {} : {display:'none'}}>
     {children}
   </div>
-)
-
-const TanSection = ({light, className, children})=>(
-  <section className={`${className} bg-tan-${light? 'lightest':'light'} text-brown overflow-auto`} >
-    {children}
-  </section>
-)
-
-const BackgroundSection = ({img, className, children})=>(
-  <section className={`${className} background`} >
-      {children}
-    <style jsx>{`
-      .background{
-        background: url('${img || "/static/img/uploads/download-5.png"}'), #f7f7ee73;
-        background-size: cover;
-      }
-    `}</style>
-  </section>
 )
 
 const SplitScreen = ({className="", children}) => (

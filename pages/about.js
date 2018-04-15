@@ -1,7 +1,7 @@
-import Page from 'components/layouts/Page'
+import BasicPage from 'components/layouts/BasicPage'
 
 export default () => (
-  <Page>
-  	<p>This is the about page</p>
-  </Page>
+  <BasicPage header="about">
+  	<p>This is the about BasicPage</p>
+  </BasicPage>
 )

@@ -1,10 +1,10 @@
 import { Component } from 'react';
 import Nav from 'components/Nav'
 
-export default ({children})=>(
+export default ({className, children})=>(
   <div className="h-full flex flex-col">
     <Nav />
-    <div className="flex-1" style={{'marginTop':'60px'}}>
+    <div className={`flex-1 ${className}`} style={{'marginTop':'60px'}}>
       { children }
     </div>
     <footer className="pin-b">

@@ -1,7 +1,7 @@
-import Page from 'components/layouts/Page'
+import BasicPage from 'components/layouts/BasicPage'
 
 export default () => (
-  <Page>
-  	<p>This is the services page</p>
-  </Page>
+  <BasicPage header={'services'}>
+  	<p>This is the services BasicPage</p>
+  </BasicPage>
 )
