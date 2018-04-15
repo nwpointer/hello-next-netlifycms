@@ -16,6 +16,8 @@
     "react-dom": "^16.2.0",
     "react-ratio": "^0.1.5",
     "react-resize-to-aspect-ratio": "^1.0.7",
+    "react-responsive-carousel": "^3.1.36",
+    "react-touch": "^0.4.3",
     "require-all": "^2.2.0"
   },
   "scripts": {

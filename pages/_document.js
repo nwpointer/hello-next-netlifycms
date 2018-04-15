@@ -22,6 +22,7 @@ export default class MyDocument extends Document {
           <link rel="stylesheet" href="/static/main.css"/>
           <link rel="stylesheet" href="/static/fontawesome/web-fonts-with-css/css/fontawesome-all.min.css"/>
           <link rel="stylesheet" href="/static/fontawesome/web-fonts-with-css/css/fa-brands.min.css"/>
+          <link rel="stylesheet" href="/static/carousel.min.css"/>
           <style>{`
             #__next{ height: 100%}
           `}</style>

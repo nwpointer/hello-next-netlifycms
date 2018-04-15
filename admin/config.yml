@@ -37,7 +37,7 @@ collections:
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}-{{year}}-{{month}}-{{day}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - {label: "Name", name: "title", widget: "string"}
+      - {label: "Name", name: "name", widget: "string"}
       - {label: "Picture", name: "picture", widget: "image", required: false}
       - {label: "text", name: "text", widget: "markdown"}
 
@@ -71,15 +71,15 @@ collections:
             fields:
               - {label: "show", name: 'show', widget: "boolean", default: true}
               - label: "Featured Testimonials"
-                name: "testimonials"
+                name: "where"
                 widget: "list"
                 fields:
                   - label: "Testimonial"
-                    name: "title"
+                    name: "name"
                     widget: "relation"
                     collection: "testimonials"
-                    searchFields: ["title"]
-                    valueField: "title"
+                    searchFields: ["name"]
+                    valueField: "name"
           - label: "Appointment form"
             name: "appointment"
             widget: "boolean"
@@ -92,7 +92,7 @@ collections:
               - {label: "Primary text", name: 'primaryText', widget: "string", default: "From the blog"}
               - {label: "Secondary Text", name: 'secondaryText', widget: "string", required: false}
               - label: "Featured Posts (pick 3)"
-                name: "postTitles"
+                name: "where"
                 widget: "list"
                 fields:
                   - label: "Post"

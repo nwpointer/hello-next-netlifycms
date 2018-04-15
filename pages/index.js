@@ -1,4 +1,7 @@
 import { Component } from 'react';
+import { filter } from 'lodash';
+import { Carousel } from 'react-responsive-carousel';
+import { Swipeable, defineSwipe } from 'react-touch';
 
 import Nav from 'components/Nav'
 import Hero from 'components/Hero'
@@ -9,8 +12,11 @@ import posts from 'content/posts.json'
 import services from 'content/services.json'
 import pageContent from 'content/pages/home.json';
 
-const Testimonial = ({body}, i) => {
-  return <div key={i}>{body}</div>
+const matches = (a,b)=>{
+  return b.map(where => {
+    const matches = filter(a, where)
+    return Array.isArray(matches) && matches[0]
+  })
 }
 
 const summary = n => body => {
@@ -20,9 +26,9 @@ const summary = n => body => {
     : shortened
 }
 
-const PostPreview = ({title, body, thumbnail})=>(
+const PostPreview = ({title='title', body='body', thumbnail='/'})=>(
   <div className="h-full bg-white hover:-pt-2 transition-fast flex flex-col rounded shadow hover:shadow-lg">
-    <img className="rounded-t" src={thumbnail} alt=""/>
+    <img className="rounded-t" src={thumbnail} alt={thumbnail}/>
     <div className="p-8 flex flex-col flex-1">
       <h2 className="mb-2 serif">{title}</h2>
       <p>{summary(10)(body)}</p>
@@ -86,49 +92,97 @@ const AboutHero = () => (
   </div>
 )
 
-const TestimonialSection = () => (
-  <TanSection>
-  <div className="container mx-auto mt-16 pb-32">
-    <h4 className="text-center tracking-widest  mb-4 text-center uppercase poppins font-black ">
-      Testimonials
-    </h4>
-    <h1 className="text-center text-brown-dark border-1 uppercase serif font-black tracking-wide">
-      What people are saying:
-    </h1>
-    <div className="flex align-center justify-center px-4  mt-16">
-      <div className="ml-auto mr-4 flex hover:text-brown-dark">
-        <div className="hidden sm:block my-auto arrow">
-          <i style={{lineHeight:"1.6em"}} className="fas text-3xl fa-angle-left block "></i>
-        </div>
-      </div>
-      <div style={{"maxWidth":"400px"}} className="bg-white text-center text-grey-darker rounded shadow-md">
-        <div className="w-full flex ">
-          <img src="/static/img/rachel2-head.jpg" className="shadow-md -mt-8 mx-auto rounded-full border-4 border-white w-16 h-16 mb-4" alt=""/>
-        </div>
-        <div className="mx-8 mb-4">
-          <h4 className="mb-2">Sarray Fowler</h4>
-          <p className="leading-normal pb-4">"best doula in town, hands down. Very professional and made the process so much easier. would recommend"</p>
-        </div>
-      </div>
-      <div className="mr-auto ml-4 flex hover:text-brown-dark">
-        <div className="hidden sm:block my-auto arrow">
-          <i style={{lineHeight:"1.6em"}} className="fas text-3xl fa-angle-right "></i>
-        </div>
-      </div>
+
+const Testimonial = ({name, date, text, picture}) => (
+  <div style={{"maxWidth":"400px"}} className="bg-white overflow-show text-center text-grey-darker rounded shadow-md">
+    <div className="w-full flex ">
+      {picture && <img src={picture} className="shadow-md -mt-8 -mb-2  mx-auto rounded-full border-4 border-white w-16 h-16" alt=""/>}
     </div>
-    <style jsx>{`
-      .arrow{
-        padding: 0em;
-        width: 3em;
-        height: 3em;
-        text-align: center;
-        border-radius: 9999px;
-        background: rgba(0,0,0,0.05);
-      }
-    `}</style>
+    <div className="mx-8 mt-6">
+      <h4 className="mb-2">{name}</h4>
+      <p className="leading-normal pb-6">
+        {text}
+      </p>
+    </div>
   </div>
-  </TanSection>
 )
+
+function mod(n, m) {
+  return ((n % m) + m) % m;
+}
+
+class TestimonialSection extends Component {
+  constructor(props) {
+    super(props);
+    const {where, testimonials} = props;
+    const testimonialList = listFromRecords(testimonials)
+    const matchingTestimonials = matches(testimonialList, where)
+    this.items = matchingTestimonials
+    this.state = {n:0}
+  }
+  delta(n){
+    const max = this.items.length
+    this.setState({n: mod((n+this.state.n),max)})
+  }
+  render(){
+    const {show, where, testimonials} = this.props;
+    return (
+      <TanSection>
+        <Hideable show={show} className="container mx-auto mt-16 pb-16">
+          <h4 className="text-center tracking-widest  mb-4 text-center uppercase poppins font-black ">
+            Testimonials
+          </h4>
+          <h1 className="text-center text-brown-dark border-1 uppercase serif font-black tracking-wide">
+            What people are saying:
+          </h1>
+          <div className="flex hidden align-center justify-center px-4 mt-16">
+            <div className="ml-auto mr-4 flex hover:text-brown-dark" onClick={()=>this.delta(-1)}>
+              <div className="hidden sm:block my-auto arrow">
+                <i style={{lineHeight:"1.6em"}} className="fas text-3xl fa-angle-left block "></i>
+              </div>
+            </div>
+            <div>
+                {
+                  this.items.map((item, i)=>(
+                    <Swipeable onSwipeLeft={()=>this.delta(1)} onSwipeRight={()=>this.delta(-1)} >
+                      <div key={i} style={{"userSelect": "none"}}>
+                        <Hideable show={this.state.n == i}>
+                          <Testimonial {...item} />
+                        </Hideable>
+                      </div>
+                    </Swipeable>
+                  ))
+                }
+            </div>
+            <div className="mr-auto ml-4 flex hover:text-brown-dark" onClick={()=>this.delta(1)}>
+              <div className="hidden sm:block my-auto arrow">
+                <i style={{lineHeight:"1.6em"}} className="fas text-3xl fa-angle-right "></i>
+              </div>
+            </div>
+          </div>
+          <div className="flex justify-center flex-row mt-6">
+            {
+              this.items.map((item, i)=>(
+                <div className={`bg-grey${this.state.n == i ? '-darker': ''} w-2 h-2 m-1 rounded-full`}></div>
+              ))
+            }
+          </div>
+
+          <style jsx>{`
+            .arrow{
+              padding: 0em;
+              width: 3em;
+              height: 3em;
+              text-align: center;
+              border-radius: 9999px;
+              background: rgba(0,0,0,0.05);
+            }
+          `}</style>
+        </Hideable>
+      </TanSection>
+    )
+  }
+}
 
 const AppointmentSection = ({show}) => (
   <Hideable show={show}> 
@@ -167,34 +221,38 @@ const AppointmentSection = ({show}) => (
   </Hideable>
 )
 
-const BlogHighlights = ({show, primaryText, secondaryText, postTitles}) => (
-  <Hideable show={show}>
-    <div className="bg-tan-light text-brown pt-8 pb-32">
-      <h1 className="pt-16 pb-2 text-4xl text-center text-brown-dark border-1 uppercase serif font-black tracking-wide">
-        { primaryText }
-      </h1>
-      <p className="text-center text-brown-light pb-8 px-4 poppins">
-        { secondaryText }
-      </p>
-      <div className="container mx-auto px-2 mt-4">
-        <div className="flex flex-wrap -mx-2 px-2">
-          <div className="mx-auto sm:w-1/2 lg:w-1/3 px-2 mb-4">
-            { PostPreview(listFromRecords(posts)[0]) }
+const BlogHighlights = ({show, primaryText, secondaryText, where, posts}) => {
+  const postList = listFromRecords(posts);
+  const matchingPosts = matches(postList, where)
+  return (
+    <Hideable show={show}>
+      <div className="bg-tan-light text-brown pt-8 pb-32">
+        <h1 className="pt-16 pb-2 text-4xl text-center text-brown-dark border-1 uppercase serif font-black tracking-wide">
+          { primaryText }
+        </h1>
+        <p className="text-center text-brown-light pb-8 px-4 poppins">
+          { secondaryText }
+        </p>
+        <div className="container mx-auto px-2 mt-4">
+          <div className="flex flex-wrap -mx-2 px-2">
+            <div className="mx-auto sm:w-1/2 lg:w-1/3 px-2 mb-4">
+              <PostPreview {...matchingPosts[0]} />
+            </div>
+            <div className="mx-auto sm:w-1/2 lg:w-1/3 px-2 mb-4">
+              <PostPreview {...matchingPosts[1]} />
+            </div>
+            <div className="mx-auto sm:w-1/2 lg:w-1/3 px-2 mb-4 sm:hidden lg:inline">
+              <PostPreview {...matchingPosts[2]} />
+            </div>
           </div>
-          <div className="mx-auto sm:w-1/2 lg:w-1/3 px-2 mb-4">
-            { PostPreview(listFromRecords(posts)[1]) }
+          <div className="text-center mx-auto mt-8">
+            <a className="tracking-wide rounded no-underline bg-blue-darker poppins uppercase hover:bg-blue-darkest text-white text-sm py-4 px-6 border-2 border-blue-darker" href="/blog">read more posts</a>
           </div>
-          <div className="mx-auto sm:w-1/2 lg:w-1/3 px-2 mb-4 sm:hidden lg:inline">
-            { PostPreview(listFromRecords(posts)[2]) }
-          </div>
-        </div>
-        <div className="text-center mx-auto mt-8">
-          <a className="tracking-wide rounded no-underline bg-blue-darker poppins uppercase hover:bg-blue-darkest text-white text-sm py-4 px-6 border-2 border-blue-darker" href="/blog">read more posts</a>
         </div>
       </div>
-    </div>
-  </Hideable>
-)
+    </Hideable>
+  )
+}
 
 const Hideable = ({show, className, children})=> (
   <div className={className} style={show ? {} : {display:'none'}}>
@@ -239,9 +297,9 @@ export default class extends Component {
             <AboutHero />
           </SplitScreen>
         </TanSection>
-        <TestimonialSection {...pageContent.testimonials} />
+        <TestimonialSection testimonials={testimonials} {...pageContent.testimonials} />
         <AppointmentSection show={pageContent.appointment} />
-        <BlogHighlights {...pageContent.blog} />
+        <BlogHighlights posts={posts}  {...pageContent.blog} />
       </Page>
     )
   }
