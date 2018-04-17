@@ -1,1 +1,9 @@
-{}
+{
+  "header": "about gooseberry",
+  "body": "content",
+  "aboutMe": {
+    "primaryText": "RACHEL IS A DONA CERTIFIED DOULA",
+    "secondaryText": "Should be memorable, put you and your partner at ease and leave you feeling wrapped in comfort.",
+    "body": "some more content that may not be shown"
+  }
+}
