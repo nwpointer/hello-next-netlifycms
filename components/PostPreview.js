@@ -17,7 +17,7 @@ const PostPreview = ({title='title', body='body', slug, thumbnail='/'})=>(
           <p>{summary(10)(body)}</p>
           <br/>
           <a className="mt-auto text-blue-dark no-underline hover:text-blue" href="/">
-            read more
+            Read more
             <i className="fas ml-1 fa-angle-right "></i>
           </a>
         </div>

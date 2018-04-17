@@ -46,8 +46,40 @@ collections:
     editor:
          preview: false
     files:
+      - file: "content/pages/about.json"
+        label: "About Page"
+        format: "json"
+        name: "about"
+        fields: 
+          - {label: "Header", name: "header", widget: "string"}
+          - {label: "Subheader", name: "subheader", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+          - label: "About me"
+            name: "aboutMe" 
+            widget: "object"
+            fields:
+              - {label: "Primary Text", name: "primaryText", widget: "string"}
+              - {label: "Secondary Text", name: "secondaryText", widget: "string"}
+              - {label: "Body", name: "body", widget: "markdown"}
+      - file: "content/pages/services.json"
+        label: "Services Page"
+        format: "json"
+        name: "services"
+        fields: 
+          - {label: "Header", name: "header", widget: "string"}
+          - {label: "Subheader", name: "subheader", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+      - file: "content/pages/blog.json"
+        label: "Blog Page"
+        format: "json"
+        name: "blog"
+        fields: 
+          - {label: "Header", name: "header", widget: "string"}
+          - {label: "Subheader", name: "subheader", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+          - {label: "show filters", name: "filters", widget: "boolean", default: false}
       - file: "content/pages/home.json"
-        label: "Home"
+        label: "Home Page"
         format: "json"
         name: "home"
         fields:

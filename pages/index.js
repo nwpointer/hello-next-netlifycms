@@ -62,8 +62,15 @@ const AboutHero = () => (
     <div className="mt-auto">
       <img className="shadow-md hidden rounded-full border-4 border-white h-32 mb-4" src="/static/img/rachel-head.jpg" alt=""/>
       <h1 className="uppercase poppins font-black tracking-wide mb-4 mt-4">Rachel is a DONA certified doula</h1>
-      <p>should be memorable, put you and your partner at ease and leave you feeling wrapped in comfort.</p>
-      <a className="mt-4 text-white inline-block" href="/about"> learn more</a>
+      <div className="font-hairline leading-tight">
+        <div className="light">
+          <p>Should be memorable, put you and your partner at ease and leave you feeling wrapped in comfort.</p>
+        </div>
+        <a className="mt-4 text-white inline-block no-underline" href="/about">
+          Learn more
+          <i className="fas ml-1 fa-angle-right "></i>
+        </a>
+      </div>
     </div>
     <style jsx>{`
       .bg-face{

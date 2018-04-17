@@ -45,6 +45,10 @@ body{
 	background: rgba(0,0,0,0) !important;
 }
 
+a:hover i {
+	margin-left: 0.5em;
+}
+
 .light{
 	opacity: 0.8;
 }
