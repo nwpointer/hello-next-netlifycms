@@ -1,7 +1,8 @@
 import BasicPage from 'components/layouts/BasicPage'
+import {header, subheader, body, aboutMe} from 'content/pages/about.json'
 
 export default () => (
-  <BasicPage header="about">
-  	<p>This is the about BasicPage</p>
+  <BasicPage header={header} subheader={subheader}>
+  	{body}
   </BasicPage>
 )

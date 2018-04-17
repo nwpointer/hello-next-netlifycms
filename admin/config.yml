@@ -51,8 +51,8 @@ collections:
         format: "json"
         name: "about"
         fields: 
-          - {label: "Header", name: "header", widget: "string"}
-          - {label: "Subheader", name: "subheader", widget: "string"}
+          - {label: "Header", name: "header", widget: "string", default:"about"}
+          - {label: "Subheader", name: "subheader", widget: "string", required: false}
           - {label: "Body", name: "body", widget: "markdown"}
           - label: "About me"
             name: "aboutMe" 
@@ -66,17 +66,16 @@ collections:
         format: "json"
         name: "services"
         fields: 
-          - {label: "Header", name: "header", widget: "string"}
-          - {label: "Subheader", name: "subheader", widget: "string"}
+          - {label: "Header", name: "header", widget: "string", default:"services"}
+          - {label: "Subheader", name: "subheader", widget: "string", required: false}
           - {label: "Body", name: "body", widget: "markdown"}
       - file: "content/pages/blog.json"
         label: "Blog Page"
         format: "json"
         name: "blog"
         fields: 
-          - {label: "Header", name: "header", widget: "string"}
-          - {label: "Subheader", name: "subheader", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}
+          - {label: "Header", name: "header", widget: "string", default:"blog"}
+          - {label: "Subheader", name: "subheader", widget: "string", required: false}
           - {label: "show filters", name: "filters", widget: "boolean", default: false}
       - file: "content/pages/home.json"
         label: "Home Page"
