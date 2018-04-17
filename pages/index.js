@@ -26,7 +26,7 @@ const matches = (a,b)=>{
 }
 
 const CallToAction = ({primaryText, secondaryText})=>(
-  <div className="small-container pt-8 poppins lg:text-xl leading-normal text-center  mx-auto pb-8">
+  <div className="small-container pt-8 poppins lg:text-xl leading-normal text-center mx-auto pb-8">
     <div className="p-8">
       {primaryText}
       <br/> <br/> 

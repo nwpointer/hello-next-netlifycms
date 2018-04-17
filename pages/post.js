@@ -1,5 +1,5 @@
 import { Component } from 'react'
-import Page from 'components/layouts/Page'
+import BasicPage from 'components/layouts/BasicPage'
 import posts from 'content/posts.js'
 
 export default class extends Component {
@@ -9,10 +9,10 @@ export default class extends Component {
 
   render() {
     return(
-      <Page>
+      <BasicPage>
         <h1>{this.props.title}</h1>
         {this.props.body}
-      </Page>
+      </BasicPage>
     )
   }
 }

@@ -56,6 +56,11 @@ let colors = {
   'grey-lightest': '#f8fafc',
   'white': '#ffffff',
 
+  'lavender-light': "#a0a0ed",
+  'lavender': "#7878b9",
+  'lavender-dark':'#6464a9',
+  'lavender-darker': "#525292",
+
   'tan-dark': '#5f5842',
   'tan': '#b1a684',
   'tan-light': '#f5f0df',
@@ -664,7 +669,9 @@ module.exports = {
     '4': '1rem',
     '6': '1.5rem',
     '8': '2rem',
+    '12': '3rem',
     '16': '4rem',
+    '24': '6rem',
     '32': '8rem',
   },
 
