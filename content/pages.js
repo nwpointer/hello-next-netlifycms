@@ -6,6 +6,8 @@ module.exports = {
 
 			case 'blog': return require('content/pages/blog.json');
 
+			case 'contact': return require('content/pages/contact.json');
+
 			case 'home': return require('content/pages/home.json');
 
 			case 'services': return require('content/pages/services.json');
@@ -18,6 +20,8 @@ module.exports = {
 		'/page/about': { page: '/page', query: { slug: "about"} },
 
 		'/page/blog': { page: '/page', query: { slug: "blog"} },
+
+		'/page/contact': { page: '/page', query: { slug: "contact"} },
 
 		'/page/home': { page: '/page', query: { slug: "home"} },
 

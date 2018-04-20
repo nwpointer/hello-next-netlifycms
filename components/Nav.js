@@ -44,23 +44,23 @@ class Nav extends Component {
 					  <div onClick={this.toggle.bind(this)} className={`menu ${isActive} flex w-full md:w-auto`}>
 				      <div className="w-full block ">
       		      <Link as="/aboutus" href="/about">
-      			    	<div className="block border-t md:border-0 text-center md:inline-block hover:bg-white bleed md:no-bleed py-6 md:px-4">
-      				      <a  className="block text no-underline text-grey-darkest hover:text-grey-darker md:inline-block md:mt-0">About</a>
+      			    	<div className="block border-t md:border-0 text-center md:inline-block hover:bg-grey-lightest bleed md:no-bleed py-6 md:px-4">
+      				      <a className="block text no-underline text-grey-darkest hover:text-grey-darker md:inline-block md:mt-0">About</a>
       			    	</div>
       			    </Link>
 			          <Link href="/services">
-			    	    	<div className="block border-t md:border-0 text-center md:inline-block hover:bg-white bleed md:no-bleed py-6 md:px-4">
-			    		      <a  className="block text no-underline text-grey-darkest hover:text-grey-darker md:inline-block md:mt-0">Services</a>
+			    	    	<div className="block border-t md:border-0 text-center md:inline-block hover:bg-grey-lightest bleed md:no-bleed py-6 md:px-4">
+			    		      <a className="block text no-underline text-grey-darkest hover:text-grey-darker md:inline-block md:mt-0">Services</a>
 			    	    	</div>
 			    	    </Link>
     	          <Link href="/blog">
-    	    	    	<div className="block border-t md:border-0 text-center md:inline-block hover:bg-white bleed md:no-bleed py-6 md:px-4">
-    	    		      <a  className="block text no-underline text-grey-darkest hover:text-grey-darker md:inline-block md:mt-0">Blog</a>
+    	    	    	<div className="block border-t md:border-0 text-center md:inline-block hover:bg-grey-lightest bleed md:no-bleed py-6 md:px-4">
+    	    		      <a className="block text no-underline text-grey-darkest hover:text-grey-darker md:inline-block md:mt-0">Blog</a>
     	    	    	</div>
     	    	    </Link>
     	          <Link href="/contact">
-    	    	    	<div className="block border-t md:border-0 text-center md:inline-block hover:bg-white bleed md:no-bleed py-6 md:px-4">
-    	    		      <a  className="block text no-underline text-grey-darkest hover:text-grey-darker md:inline-block md:mt-0">Contact</a>
+    	    	    	<div className="block border-t md:border-0 text-center md:inline-block hover:bg-grey-lightest bleed md:no-bleed py-6 md:px-4">
+    	    		      <a className="block text no-underline text-grey-darkest hover:text-grey-darker md:inline-block md:mt-0">Contact</a>
     	    	    	</div>
     	    	    </Link>
 				      </div>

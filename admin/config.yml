@@ -44,7 +44,7 @@ collections:
   - name: "pages"
     label: "Pages"
     editor:
-         preview: false
+      preview: false
     files:
       - file: "content/pages/about.json"
         label: "About Page"
@@ -77,6 +77,12 @@ collections:
           - {label: "Header", name: "header", widget: "string", default:"blog"}
           - {label: "Subheader", name: "subheader", widget: "string", required: false}
           - {label: "show filters", name: "filters", widget: "boolean", default: false}
+      - file: "content/pages/contact.json"
+        label: "Contact Page"
+        format: "json"
+        name: "contact"
+        fields:
+          - {label: "Header", name: "header", widget: "string", default:"blog"}
       - file: "content/pages/home.json"
         label: "Home Page"
         format: "json"

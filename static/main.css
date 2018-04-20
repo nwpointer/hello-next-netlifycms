@@ -683,8 +683,8 @@ body {
   background: rgba(0, 0, 0, 0) !important;
 }
 
-a:hover i {
-  margin-left: .5em;
+.lighter {
+  opacity: .6;
 }
 
 .light {

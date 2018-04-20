@@ -6,23 +6,21 @@ import ContentLink from 'components/ContentLink'
 import PostPreview from 'components/PostPreview'
 import { listFromRecords} from '../mapContent'
 import posts from 'content/posts.json'
-import testimonials from 'content/testimonials.json'
+import {header, subheader, filters} from 'content/pages/blog.json'
+import ReactMarkdown from 'react-markdown';
 
-
-const PostLink = (props, i) => (
-  <li key={i} >
-    <ContentLink type="post" record={props} />
-  </li>
+const FiltersSidebar = () => (
+  <div className="w-1/3 px-2 mt-8">
+    <h3 className="light">Catagories</h3>
+  </div>
 )
 
 export default class extends Component {
   render() {
     return(
-      <BasicPage header={'Blog'}>
+      <BasicPage header={header} subheader={subheader} constrained={!filters}>
         <div className="flex flex-col md:flex-row-reverse">
-          <div className="w-1/3 px-2 mt-8">
-            <h3 className="light">Catagories</h3>
-          </div>
+          { filters ? FiltersSidebar() : null }
           <div className="px-2 mt-8">
             <div className="w-1/3">
               <h3 className="light">Recent</h3>
