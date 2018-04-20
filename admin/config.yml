@@ -83,6 +83,9 @@ collections:
         name: "contact"
         fields:
           - {label: "Header", name: "header", widget: "string", default:"blog"}
+          - {label: "Subheader", name: "subheader", widget: "string", required: false}
+          - {label: "Phone number", name: "phone", widget: "string", required: false}
+          - {label: "Email", name: "email", widget: "string", required: false}
       - file: "content/pages/home.json"
         label: "Home Page"
         format: "json"

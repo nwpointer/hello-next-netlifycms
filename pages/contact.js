@@ -1,7 +1,8 @@
 import BasicPage from 'components/layouts/BasicPage'
+import {header, subheader, phone, email} from 'content/pages/contact.json'
 
 export default () => (
-  <BasicPage header={'Contact'}>
+  <BasicPage header={header} subheader={subheader}>
       <div className="text-center container mx-auto">
         <div className="flex md:flex-row flex-col-reverse md:mx-auto -mt-12">
 			<div className="bg-white p-8 rounded shadow-md md:mx-4 mb-4">
@@ -27,13 +28,13 @@ export default () => (
 			<div className="flex md:w-1/3 md:flex-col w-full bg-white mb-6 rounded shadow md:bg-transparent md:shadow-none">
 				<div className="w-1/2 md:w-full p-4 border-r md:border-r-0 md:bg-white md:mb-4 md:rounded md:shadow-md">
 					<i className="fas fa-phone bg-blue text-white p-2 rounded-full mb-2"></i>
-					<div><div className="light text-sm mb-1">Phone:</div> <b>555-555-5555</b></div>
+					<div><div className="light text-sm mb-1">Phone:</div> <b>{phone}</b></div>
 				</div>
 				<div className="w-1/2 md:w-full p-4 md:bg-white md:mb-4 md:rounded md:shadow-md">
 					<i class="fas fa-envelope bg-blue text-white p-2 rounded-full mb-2"></i>
 					<div>
 						<div className="light text-sm mb-1">Email:</div>
-						<b>name@gmail.com</b>
+						<b>{email}</b>
 					</div>
 				</div>
 			</div>
