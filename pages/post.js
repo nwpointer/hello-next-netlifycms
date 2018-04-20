@@ -45,9 +45,11 @@ export default class extends Component {
     return(
       <Page>
         <Hero background={thumbnail} primaryText={title} />
-        <div className="container mx-auto blog-post">
-          <div className="p-4 pt-8" style={{maxWidth:"800px"}}>
-            <ReactMarkdown source={this.props.body} />
+        <div className="border-t border-tan-lighter">
+          <div className="container mx-auto blog-post">
+            <div className="sm:p-8 p-4 pt-8 sm:pt-16 bg-white sm:m-4 mt-4 sm:rounded sm:shadow-md round md:p-16" style={{maxWidth:"800px"}}>
+              <ReactMarkdown source={this.props.body} />
+            </div>
           </div>
         </div>
       </Page>
