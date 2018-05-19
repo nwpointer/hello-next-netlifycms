@@ -10,7 +10,7 @@
     "secondaryText": "Learn how we can support you:"
   },
   "testimonials": {
-    "show": true,
+    "show": false,
     "where": [
       {
         "name": "Jeorme pickins"
@@ -20,7 +20,7 @@
       }
     ]
   },
-  "appointment": true,
+  "appointment": false,
   "blog": {
     "show": true,
     "primaryText": "FROM THE BLOG",
