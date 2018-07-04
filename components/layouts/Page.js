@@ -16,9 +16,11 @@ export default ({className, children})=>(
 				<div className="ml-auto w-full md:w-auto">
 					<a target="_blank" href="https://www.facebook.com/gooseberrydoulasPDX/?timeline_context_item_type=intro_card_work&timeline_context_item_source=100002591554029">
 						<i className="text-white ml-2 fab fa-facebook-square text-xl"></i>
-						<i className="text-white ml-2 fab fa-pinterest text-xl"></i>
-						<i className="text-white ml-2 fab fa-instagram text-xl"></i>
 					</a>
+					<a target="_blank" href="https://www.pinterest.com/gooseberrydoulas/">
+						<i className="text-white ml-2 fab fa-pinterest text-xl"></i>
+					</a>
+					
 				</div>
 			</div>
 	    </div>

@@ -8,9 +8,11 @@ const Hero = ({max="70vh", min="350px", background, button, primaryText, seconda
           <h1 className="serif md:text-5xl text-3xl highlight text-grey-darkest mb-2">{primaryText}</h1>
           <div className="serif md:text-3xl text-2xl highlight text-lg text-grey-darkest" >{secondaryText}</div>
           <br/><br/>
-          <button className="tracking-wide rounded bg-lavender-darker hover:bg-lavender-dark poppins uppercase text-white text-sm py-4 px-6 border-2 border-lavender-dark">
-            { button }
-          </button>
+          <a href="/services">
+            <button style={{background: "#105a98"}} className="tracking-wide rounded bg-blue-dark hover:bg-blue-dark poppins uppercase text-white text-sm py-4 px-6 border-2 border-blue-dark">
+              { button }
+            </button>
+          </a>
         </div>
       </div>
     </Ratio>

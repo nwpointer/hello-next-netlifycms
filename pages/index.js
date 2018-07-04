@@ -61,10 +61,13 @@ const AboutHero = () => (
   <div className="w-full bg-face flex flex-col p-8 text-white">
     <div className="mt-auto">
       <img className="shadow-md hidden rounded-full border-4 border-white h-32 mb-4" src="/static/img/rachel-head.jpg" alt=""/>
-      <h1 className="uppercase poppins font-black tracking-wide mb-4 mt-4">Rachel is a DONA certified doula</h1>
+      <h1 className="uppercase poppins font-black tracking-wide mb-4 mt-4">Rachel is a DONA trained doula</h1>
       <div className="font-hairline leading-tight">
         <div className="light">
-          <p>Should be memorable, put you and your partner at ease and leave you feeling wrapped in comfort.</p>
+          <p>Rachel is a birth and postpartum full spectrum doula who beleives in  a  mothers right to empowered choice in the birth process.
+          
+
+          </p>
         </div>
         <a className="mt-4 text-white inline-block no-underline" href="/about">
           Learn more
@@ -265,6 +268,14 @@ export default class extends Component {
             <ServicesList services={services} />
             <AboutHero />
           </SplitScreen>
+          
+          <div style={{textAlign:'center', position:'relative'}}>
+            <h2>WHAT IS A DOULA?</h2>
+            <p style={{maxWidth:"400px", margin:'auto', paddingBottom: '2em'}}>
+              A doula is a person who supports women and their partner during the labor and after.  She tends to your nonmedical needs and is an advocate for you in during your birth.
+            </p>
+          </div>
+
         </TanSection>
         <TestimonialSection testimonials={testimonials} {...pageContent.testimonials} />
         <AppointmentSection show={pageContent.appointment} />

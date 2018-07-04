@@ -26,7 +26,7 @@ class Nav extends Component {
 					  {/* logo */}
 					  <Link href="/">
 					  <div className="logotype flex items-center flex-no-shrink mr-6 h-2 py-6 px-2">
-					    <img className="fill-current w-16 mr-2" src="https://theverygreengrocer.co.uk/wp-content/uploads/2016/06/IMG_1137.png" alt="" />
+					    <img className="fill-current w-16 mr-2" src="/static/img/logo.png" alt="" />
 					    <span className="font-semibold text-xl text-grey-darkest">Gooseberry Doulas</span>
 					  </div>
 					  </Link>
