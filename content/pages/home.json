@@ -22,7 +22,7 @@
   },
   "appointment": false,
   "blog": {
-    "show": true,
+    "show": false,
     "primaryText": "FROM THE BLOG",
     "secondaryText": "\"Before anything else, preparation is the key to success.\"",
     "where": [
