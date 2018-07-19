@@ -4,10 +4,10 @@ import {header, subheader, phone, email} from 'content/pages/contact.json'
 export default () => (
   <BasicPage header={header} subheader={subheader}>
       <div className="text-center container mx-auto">
-        <div className="flex md:flex-row flex-col-reverse md:mx-auto -mt-12">
+        <div className="flex md:flex-row flex-col-reverse md:mx-auto -mt-4  md:-mt-12">
 			<div className="bg-white p-8 rounded shadow-md md:mx-4 mb-4">
 				<h3 className="mb-6">Direct message</h3>
-			  <form name="contact" netlify>
+			  <form name="contact" method="POST" netlify>
 			    <div className="w-full text-left">Name:</div>
 			    <div className="flex">
 			      <input className="bg-grey-lighter mr-2 p-2 mb-4 mt-2 rounded border w-full" type="text" placeholder="First Name" />
@@ -20,7 +20,7 @@ export default () => (
 			    <input className="bg-grey-lighter mr-2 p-2 mb-4 mt-2 rounded border w-full" type="text" />
 			    <div className="text-left">Message:</div>
 			    <textarea className="bg-grey-lighter p-2 mb-4 mt-2 rounded border w-full" rows="3" cols="50"/>
-			    <button className="tracking-wide w-full mt-4 rounded bg-blue-darker poppins uppercase hover:bg-blue-darkest text-white text-sm py-4 px-6 border-2 border-blue-darker">
+			    <button type="submit" className="tracking-wide w-full mt-4 rounded bg-blue-darker poppins uppercase hover:bg-blue-darkest text-white text-sm py-4 px-6 border-2 border-blue-darker">
 			      Send Message
 			    </button>
 			  </form>
@@ -34,7 +34,7 @@ export default () => (
 					<i class="fas fa-envelope bg-blue text-white p-2 rounded-full mb-2"></i>
 					<div>
 						<div className="light text-sm mb-1">Email:</div>
-						<b>{email}</b>
+						<b>{email.split('@')[0]}@<wbr/><b>{email.split('@')[1]}</b></b>
 					</div>
 				</div>
 			</div>

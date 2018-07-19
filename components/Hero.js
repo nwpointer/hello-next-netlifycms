@@ -9,7 +9,7 @@ const Hero = ({max="70vh", min="350px", background, button, primaryText, seconda
           <div className="serif md:text-3xl text-2xl highlight text-lg text-grey-darkest" >{secondaryText}</div>
           <br/><br/>
           <a href="/services">
-            <button style={{background: "#105a98"}} className="tracking-wide rounded bg-blue-dark hover:bg-blue-dark poppins uppercase text-white text-sm py-4 px-6 border-2 border-blue-dark">
+            <button style={{background: "#105a98", borderColor:"#105a98"}} className="tracking-wide rounded bg-blue-dark hover:bg-blue-dark poppins uppercase text-white text-sm py-4 px-6 border-2 border-blue-dark">
               { button }
             </button>
           </a>

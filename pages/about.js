@@ -3,7 +3,6 @@ import {header, subheader, body, aboutMe} from 'content/pages/about.json'
 import ReactMarkdown from 'react-markdown';
 
 const textStyle = {
-	width: '66%',
 	display: 'inline-block',
 	padding: '2em',
 	verticalAlign: 'top',
@@ -12,7 +11,6 @@ const textStyle = {
 }
 
 const imgStyle  ={
-	width: '33%',
 	display: 'inline-block',
 	verticalAlign: 'top',
 	padding: '1em',
@@ -24,8 +22,8 @@ const imgStyle  ={
 
 export default () => (
   <BasicPage header={header} subheader={subheader}>
-  	<img style={imgStyle} className="fill-current" src="/static/img/rbab.jpg" alt="" />
-  	<div style={textStyle} >
+  	<img style={imgStyle} className="fill-current md:inline hidden md:w-1/3" src="/static/img/rbab.jpg" alt="" />
+  	<div style={textStyle} className="md:w-2/3">
   		<ReactMarkdown source={body} />
   	</div>
   </BasicPage>

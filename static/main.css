@@ -674,6 +674,10 @@ button,
  * @import "components/forms";
  */
 
+.h-full {
+  height: 100%;
+}
+
 body {
   overflow-x: hidden;
   max-width: 100vw;
@@ -695,7 +699,7 @@ ul li {
 h2 {
   margin-bottom: .75em;
   margin-top: 2em;
-  font-family: Alegreya, serif !important;
+  font-family: Alegreya, serif;
 }
 
 .blog-post p {
@@ -738,8 +742,9 @@ h2 {
   top: -1em;
 }
 
-.poppins {
-  font-family: 'Poppins', sans-serif;
+.poppins,
+.sans {
+  font-family: 'Poppins', sans-serif !important;
 }
 
 .serif {
@@ -808,6 +813,10 @@ h2 {
 
 .bg-black {
   background-color: #22292f;
+}
+
+.bg-black-light {
+  background-color: #22292f90;
 }
 
 .bg-grey-darkest {
@@ -1144,6 +1153,10 @@ h2 {
 
 .hover\:bg-black:hover {
   background-color: #22292f;
+}
+
+.hover\:bg-black-light:hover {
+  background-color: #22292f90;
 }
 
 .hover\:bg-grey-darkest:hover {
@@ -1546,6 +1559,10 @@ h2 {
   border-color: #22292f;
 }
 
+.border-black-light {
+  border-color: #22292f90;
+}
+
 .border-grey-darkest {
   border-color: #3d4852;
 }
@@ -1880,6 +1897,10 @@ h2 {
 
 .hover\:border-black:hover {
   border-color: #22292f;
+}
+
+.hover\:border-black-light:hover {
+  border-color: #22292f90;
 }
 
 .hover\:border-grey-darkest:hover {
@@ -4944,6 +4965,10 @@ h2 {
   color: #22292f;
 }
 
+.text-black-light {
+  color: #22292f90;
+}
+
 .text-grey-darkest {
   color: #3d4852;
 }
@@ -5278,6 +5303,10 @@ h2 {
 
 .hover\:text-black:hover {
   color: #22292f;
+}
+
+.hover\:text-black-light:hover {
+  color: #22292f90;
 }
 
 .hover\:text-grey-darkest:hover {
@@ -6037,6 +6066,10 @@ h2 {
     background-color: #22292f;
   }
 
+  .sm\:bg-black-light {
+    background-color: #22292f90;
+  }
+
   .sm\:bg-grey-darkest {
     background-color: #3d4852;
   }
@@ -6371,6 +6404,10 @@ h2 {
 
   .sm\:hover\:bg-black:hover {
     background-color: #22292f;
+  }
+
+  .sm\:hover\:bg-black-light:hover {
+    background-color: #22292f90;
   }
 
   .sm\:hover\:bg-grey-darkest:hover {
@@ -6773,6 +6810,10 @@ h2 {
     border-color: #22292f;
   }
 
+  .sm\:border-black-light {
+    border-color: #22292f90;
+  }
+
   .sm\:border-grey-darkest {
     border-color: #3d4852;
   }
@@ -7107,6 +7148,10 @@ h2 {
 
   .sm\:hover\:border-black:hover {
     border-color: #22292f;
+  }
+
+  .sm\:hover\:border-black-light:hover {
+    border-color: #22292f90;
   }
 
   .sm\:hover\:border-grey-darkest:hover {
@@ -10163,6 +10208,10 @@ h2 {
     color: #22292f;
   }
 
+  .sm\:text-black-light {
+    color: #22292f90;
+  }
+
   .sm\:text-grey-darkest {
     color: #3d4852;
   }
@@ -10497,6 +10546,10 @@ h2 {
 
   .sm\:hover\:text-black:hover {
     color: #22292f;
+  }
+
+  .sm\:hover\:text-black-light:hover {
+    color: #22292f90;
   }
 
   .sm\:hover\:text-grey-darkest:hover {
@@ -11242,6 +11295,10 @@ h2 {
     background-color: #22292f;
   }
 
+  .md\:bg-black-light {
+    background-color: #22292f90;
+  }
+
   .md\:bg-grey-darkest {
     background-color: #3d4852;
   }
@@ -11576,6 +11633,10 @@ h2 {
 
   .md\:hover\:bg-black:hover {
     background-color: #22292f;
+  }
+
+  .md\:hover\:bg-black-light:hover {
+    background-color: #22292f90;
   }
 
   .md\:hover\:bg-grey-darkest:hover {
@@ -11978,6 +12039,10 @@ h2 {
     border-color: #22292f;
   }
 
+  .md\:border-black-light {
+    border-color: #22292f90;
+  }
+
   .md\:border-grey-darkest {
     border-color: #3d4852;
   }
@@ -12312,6 +12377,10 @@ h2 {
 
   .md\:hover\:border-black:hover {
     border-color: #22292f;
+  }
+
+  .md\:hover\:border-black-light:hover {
+    border-color: #22292f90;
   }
 
   .md\:hover\:border-grey-darkest:hover {
@@ -15368,6 +15437,10 @@ h2 {
     color: #22292f;
   }
 
+  .md\:text-black-light {
+    color: #22292f90;
+  }
+
   .md\:text-grey-darkest {
     color: #3d4852;
   }
@@ -15702,6 +15775,10 @@ h2 {
 
   .md\:hover\:text-black:hover {
     color: #22292f;
+  }
+
+  .md\:hover\:text-black-light:hover {
+    color: #22292f90;
   }
 
   .md\:hover\:text-grey-darkest:hover {
@@ -16447,6 +16524,10 @@ h2 {
     background-color: #22292f;
   }
 
+  .lg\:bg-black-light {
+    background-color: #22292f90;
+  }
+
   .lg\:bg-grey-darkest {
     background-color: #3d4852;
   }
@@ -16781,6 +16862,10 @@ h2 {
 
   .lg\:hover\:bg-black:hover {
     background-color: #22292f;
+  }
+
+  .lg\:hover\:bg-black-light:hover {
+    background-color: #22292f90;
   }
 
   .lg\:hover\:bg-grey-darkest:hover {
@@ -17183,6 +17268,10 @@ h2 {
     border-color: #22292f;
   }
 
+  .lg\:border-black-light {
+    border-color: #22292f90;
+  }
+
   .lg\:border-grey-darkest {
     border-color: #3d4852;
   }
@@ -17517,6 +17606,10 @@ h2 {
 
   .lg\:hover\:border-black:hover {
     border-color: #22292f;
+  }
+
+  .lg\:hover\:border-black-light:hover {
+    border-color: #22292f90;
   }
 
   .lg\:hover\:border-grey-darkest:hover {
@@ -20573,6 +20666,10 @@ h2 {
     color: #22292f;
   }
 
+  .lg\:text-black-light {
+    color: #22292f90;
+  }
+
   .lg\:text-grey-darkest {
     color: #3d4852;
   }
@@ -20907,6 +21004,10 @@ h2 {
 
   .lg\:hover\:text-black:hover {
     color: #22292f;
+  }
+
+  .lg\:hover\:text-black-light:hover {
+    color: #22292f90;
   }
 
   .lg\:hover\:text-grey-darkest:hover {
@@ -21652,6 +21753,10 @@ h2 {
     background-color: #22292f;
   }
 
+  .xl\:bg-black-light {
+    background-color: #22292f90;
+  }
+
   .xl\:bg-grey-darkest {
     background-color: #3d4852;
   }
@@ -21986,6 +22091,10 @@ h2 {
 
   .xl\:hover\:bg-black:hover {
     background-color: #22292f;
+  }
+
+  .xl\:hover\:bg-black-light:hover {
+    background-color: #22292f90;
   }
 
   .xl\:hover\:bg-grey-darkest:hover {
@@ -22388,6 +22497,10 @@ h2 {
     border-color: #22292f;
   }
 
+  .xl\:border-black-light {
+    border-color: #22292f90;
+  }
+
   .xl\:border-grey-darkest {
     border-color: #3d4852;
   }
@@ -22722,6 +22835,10 @@ h2 {
 
   .xl\:hover\:border-black:hover {
     border-color: #22292f;
+  }
+
+  .xl\:hover\:border-black-light:hover {
+    border-color: #22292f90;
   }
 
   .xl\:hover\:border-grey-darkest:hover {
@@ -25778,6 +25895,10 @@ h2 {
     color: #22292f;
   }
 
+  .xl\:text-black-light {
+    color: #22292f90;
+  }
+
   .xl\:text-grey-darkest {
     color: #3d4852;
   }
@@ -26112,6 +26233,10 @@ h2 {
 
   .xl\:hover\:text-black:hover {
     color: #22292f;
+  }
+
+  .xl\:hover\:text-black-light:hover {
+    color: #22292f90;
   }
 
   .xl\:hover\:text-grey-darkest:hover {

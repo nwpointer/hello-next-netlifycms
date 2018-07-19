@@ -6,14 +6,14 @@ import Link from 'next/link'
 class Nav extends Component {
 	constructor(props) {
 	  super(props);
-	  this.state = {active:false}
+	  this.state = { active:false }
 	}
 	toggle(){
 		const {active} = this.state;
-		this.setState({active:!active})
+		this.setState({ active:!active })
 	}
 	handleClickOutside() {
-	   this.setState({active:false})
+	   this.setState({ active:false })
 	}
 	render(){
 		const size = 12;
@@ -25,9 +25,9 @@ class Nav extends Component {
 				  <div className="flex items-center justify-between flex-wrap">
 					  {/* logo */}
 					  <Link href="/">
-					  <div className="logotype flex items-center flex-no-shrink mr-6 h-2 py-6 px-2">
-					    <img className="fill-current w-16 mr-2" src="/static/img/logo.png" alt="" />
-					    <span className="font-semibold text-xl text-grey-darkest">Gooseberry Doulas</span>
+					  <div className="logotype flex items-center flex-no-shrink md:mr-6 h-2 py-6 px-2">
+					    <img className="fill-current w-10 mr-2"  src="/static/img/logo.png" alt="" />
+					    <span className="font-semibold text-xl text-grey-darkest tracking-wide">GOOSEBERRY DOULAS</span>
 					  </div>
 					  </Link>
 						{/* menu toggle */}

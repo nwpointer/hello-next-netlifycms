@@ -38,22 +38,40 @@ const CallToAction = ({primaryText, secondaryText})=>(
 const formatAsMoney = (price, currency="$") => currency+(price/100).toFixed(2)
 
 const ServiceItem = ({title,description, price, icon}) => (
-  <div className="flex md:w-1/2 md:text-lg rounded hover:shadow bg-white hover:border-blue-lighter border-white border-grey-light border p-2 mb-4 mx-auto md:w-3/4">
+  <a className="no-underline" href="/services">
+  <div className="flex  md:w-1/2 md:text-lg rounded hover:shadow bg-white hover:border-blue-lighter border-white border-grey-light border p-2 mb-4 mx-auto md:w-3/4">
     { icon && <img className="shadow-md rounded-full border-2 border-white h-16 w-16" src={icon} />}
     <div className="flex flex-col justify-center ml-4">
       <div className="text-grey-darkest"><b>{title}</b></div>
       <div className="hidden text-sm text-grey-darker md:block">{description}</div>
     </div>
     <div className="flex text-blue-darker flex-col justify-center ml-auto ">
-      <div className="text-xl san-serif ml-4"><b>{formatAsMoney(price)}</b></div>
+      {
+        Number(price) > 0 && 
+        <div className="text-xl san-serif ml-4"><b>{formatAsMoney(price)}</b></div>
+      }
     </div>
   </div>
+  </a>
 )
 
 const ServicesList = ({services}) => (
-  <div className="w-full bg-white p-4 pb-16">
-    <h1 className="mt-8 mb-8 md:pb-8 md:pt-8 text-center border-1 uppercase poppins font-black tracking-wide">our services</h1>
-    { listFromRecords(services).map(ServiceItem) }
+  <div className="flex flex-col w-full bg-white p-4 pb-16">
+    <div>
+      <h1 className="mt-8 mb-8 md:pb-8 md:pt-8 text-center border-1 uppercase poppins font-black tracking-wide">our services</h1>
+      { listFromRecords(services).map(ServiceItem) }
+    </div>
+    <div className="mt-auto hidden">
+    <a className="
+      mt-4 inline-block no-underline
+      flex md:w-1/2 md:text-lg p-2 mb-4 mx-auto md:w-3/4
+    " href="/services">
+      <div className="ml-4">
+        Learn more
+      </div>
+      
+      <i className="fas ml-1 fa-angle-right "></i>
+    </a></div>
   </div>
 )
 
@@ -69,7 +87,7 @@ const AboutHero = () => (
 
           </p>
         </div>
-        <a className="mt-4 text-white inline-block no-underline" href="/about">
+        <a className="mt-4 text-white inline-block no-underline" href="/aboutus">
           Learn more
           <i className="fas ml-1 fa-angle-right "></i>
         </a>
@@ -269,7 +287,7 @@ export default class extends Component {
             <AboutHero />
           </SplitScreen>
           
-          <div style={{textAlign:'center', position:'relative'}}>
+          <div className="p-8 md:p-4 lg:p-0 lg:-mt-8 lg:pb-4" style={{textAlign:'center', position:'relative'}}>
             <h2>WHAT IS A DOULA?</h2>
             <p style={{maxWidth:"400px", margin:'auto', paddingBottom: '2em'}}>
               A doula is a person who supports women and their partner during the labor and after.  She tends to your nonmedical needs and is an advocate for you in during your birth.

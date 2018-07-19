@@ -2,18 +2,22 @@ module.exports = {
 	load: ({slug}) => {
 		switch(slug) {
 			
-			case 'breastfeeding-education': return require('content/services/breastfeeding-education.json');
+			case 'babies-first-bath': return require('content/services/babies-first-bath.json');
 
-			case 'post-partum-hourly-packages': return require('content/services/post-partum-hourly-packages.json');
+			case 'breast-feeding-support': return require('content/services/breast-feeding-support.json');
+
+			case 'overnight-stays': return require('content/services/overnight-stays.json');
 
 			default: return require('./services.json')
 		}
 	},
 	routes: ({
 		
-		'/service/breastfeeding-education': { page: '/service', query: { slug: "breastfeeding-education"} },
+		'/service/babies-first-bath': { page: '/service', query: { slug: "babies-first-bath"} },
 
-		'/service/post-partum-hourly-packages': { page: '/service', query: { slug: "post-partum-hourly-packages"} },
+		'/service/breast-feeding-support': { page: '/service', query: { slug: "breast-feeding-support"} },
+
+		'/service/overnight-stays': { page: '/service', query: { slug: "overnight-stays"} },
 
 	})
 }
