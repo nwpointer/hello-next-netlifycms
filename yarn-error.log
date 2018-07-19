@@ -1,8 +1,8 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/bin/yarn start
+  /usr/local/bin/node /usr/local/bin/yarn export
 
 PATH: 
-  /usr/local/Cellar/smlnj/110.74/libexec/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/DevDesktop/drush
+  /Users/admin/Desktop/Code/rachel/node_modules/.bin:/Users/admin/.config/yarn/link/node_modules/.bin:/Users/admin/Desktop/Code/rachel/node_modules/.bin:/Users/admin/.config/yarn/link/node_modules/.bin:/usr/local/libexec/lib/node_modules/npm/bin/node-gyp-bin:/usr/local/lib/node_modules/npm/bin/node-gyp-bin:/usr/local/bin/node_modules/npm/bin/node-gyp-bin:/usr/local/bin:/Users/admin/.yarn/bin:/Users/admin/.config/yarn/global/node_modules/.bin:/usr/local/Cellar/smlnj/110.74/libexec/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/DevDesktop/drush
 
 Yarn version: 
   1.5.1
@@ -5460,10 +5460,10 @@ Lockfile:
 
 Trace: 
   Error: Command failed.
-  Exit signal: SIGHUP
+  Exit code: 1
   Command: sh
-  Arguments: -c yarn index && yarn styles && node server.js
-  Directory: /Users/admin/Desktop/Code/hello-next-netlifycms
+  Arguments: -c next export
+  Directory: /Users/admin/Desktop/Code/rachel
   Output:
   
       at ProcessTermError.MessageError (/usr/local/lib/node_modules/yarn/lib/cli.js:186:110)
