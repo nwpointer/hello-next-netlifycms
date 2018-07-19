@@ -20,7 +20,7 @@ export default ({header, subheader, constrained=true, children})=>(
   		  	</BackgroundSection>
 	  	}
 		<TanSection light={true} className="flex-1 overflow-visible border-t border-tan-lighter">
-			<div className={`container ${constrained ? 'lg:w-3/4' : ''} mx-auto mx-auto  h-full`}>
+			<div className={`container ${constrained ? 'lg:w-3/4' : ''} mx-auto mx-auto p-4 h-full`}>
         {children}
 			</div>
 		</TanSection>
