@@ -11,7 +11,6 @@ const textStyle = {
 }
 
 const imgStyle  ={
-	display: 'inline-block',
 	verticalAlign: 'top',
 	padding: '1em',
 	background: 'white',
@@ -22,7 +21,8 @@ const imgStyle  ={
 
 export default () => (
   <BasicPage header={header} subheader={subheader}>
-  	<img style={imgStyle} className="fill-current md:inline hidden md:w-1/3" src="/static/img/rbab.jpg" alt="" />
+  	<img style={imgStyle} className="fill-current hidden md:inline-block hidden md:w-1/3" src="/static/img/rbab.jpg" alt="" />
+  	<img style={imgStyle} className="fill-current inline-block md:hidden -mb-12 md:w-1/3" src="/static/img/rbab-mobile.jpg" alt="" />
   	<div style={textStyle} className="md:w-2/3">
   		<ReactMarkdown source={body} />
   	</div>
